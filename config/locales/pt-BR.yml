@@ -14,18 +14,15 @@ pt-BR:
       funcao:
         one: "Função"
         other: "Funções"
-      estabelecimento:
-        one: "Estabelecimento"
-        other: "Estabelecimentos"
-      user_estabelecimento:
-        one: "Usuário Estabelecimento"
-        other: "Usuários Estabelecimentos"
-      categoria:
-        one: "Categoria"
-        other: "Categorias"
-      produto:
-        one: "Produto"
-        other: "Produtos"
+      g_status:
+        one: "Status"
+        other: "Status"
+      g_tipo_veiculo:
+        one: "Tipo de Veiculo"
+        other: "Tipos de Veiculos"
+      g_tipo_centro_custo:
+        one: "Tipo de Centro de Custo"
+        other: "Tipos de Centro de Custo"
     attributes:
       funcao:
         nome: "Nome"

@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_09_11_000504) do
+ActiveRecord::Schema[7.2].define(version: 2025_09_18_052426) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cargos", force: :cascade do |t|
+  create_table "g_status", force: :cascade do |t|
     t.string "descricao"
     t.string "created_by"
     t.string "updated_by"
@@ -23,23 +23,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_11_000504) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "servidors", force: :cascade do |t|
-    t.string "nome"
-    t.string "matricula"
-    t.string "email"
-    t.date "data_admissao"
-    t.bigint "setor_id"
-    t.bigint "cargo_id"
-    t.string "created_by"
-    t.string "updated_by"
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["cargo_id"], name: "index_servidors_on_cargo_id"
-    t.index ["setor_id"], name: "index_servidors_on_setor_id"
-  end
-
-  create_table "setors", force: :cascade do |t|
+  create_table "g_tipos_centro_custo", force: :cascade do |t|
     t.string "descricao"
     t.string "created_by"
     t.string "updated_by"
@@ -48,15 +32,12 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_11_000504) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
+  create_table "g_tipos_veiculos", force: :cascade do |t|
+    t.string "descricao"
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 end

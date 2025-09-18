@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :g_tipos_centro_custo
+  resources :g_tipos_veiculos
+  resources :g_status
+  resources :g_tipos_veiculo
   root 'home#index'
   get 'home/index'
 
