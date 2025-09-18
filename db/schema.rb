@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_09_18_070206) do
+ActiveRecord::Schema[7.2].define(version: 2025_09_18_080303) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -133,6 +133,22 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_070206) do
     t.index ["user_id"], name: "index_o_orcamentos_on_user_id"
   end
 
+  create_table "o_propostas", force: :cascade do |t|
+    t.bigint "o_orcamento_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "o_status_id", null: false
+    t.decimal "valor_total", precision: 15, scale: 2
+    t.string "itens"
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["o_orcamento_id"], name: "index_o_propostas_on_o_orcamento_id"
+    t.index ["o_status_id"], name: "index_o_propostas_on_o_status_id"
+    t.index ["user_id"], name: "index_o_propostas_on_user_id"
+  end
+
   create_table "o_status", force: :cascade do |t|
     t.string "descricao"
     t.string "created_by"
@@ -177,6 +193,9 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_070206) do
   add_foreign_key "o_orcamentos", "o_status"
   add_foreign_key "o_orcamentos", "o_tipos_solicitacao"
   add_foreign_key "o_orcamentos", "users"
+  add_foreign_key "o_propostas", "o_orcamentos"
+  add_foreign_key "o_propostas", "o_status"
+  add_foreign_key "o_propostas", "users"
   add_foreign_key "users", "g_status"
   add_foreign_key "users", "g_tipo_usuarios"
 end

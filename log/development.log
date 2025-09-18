@@ -26250,3 +26250,319 @@ Processing by GCondutoresController#index as HTML
 Completed 200 OK in 72ms (Views: 42.1ms | ActiveRecord: 5.6ms (5 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:09:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.8ms | GC: 2.5ms)
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 47.3ms | GC: 22.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | GC: 23.6ms)
+Completed 500 Internal Server Error in 242ms (ActiveRecord: 49.2ms (2 queries, 0 cached) | GC: 38.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `o_orcamento_cont' for an instance of Ransack::Search):
+
+Causes:
+NoMethodError (undefined method `o_orcamento_cont' for an instance of Ransack::Search)
+    4: <div class="card">
+    5:   <div class="card-header d-flex">
+    6:     <%= search_form_for @q, html: { class: "d-flex gap-2" , autocomplete: "off"} do |f| %>
+    7:       <%= f.search_field :o_orcamento_cont, class: "form-control", placeholder: "Pesquisar" %>
+    8:       <%= f.button(type: 'submit', class: 'btn btn-info') { tag.i(class: 'ph-magnifying-glass') } %>
+    9:       <%= link_to  tag.i(class: 'ph-x-circle'), o_propostas_path, class: "btn btn-light" if params[:q] %>
+   10:       <% end %>
+  
+app/views/o_propostas/index.html.erb:7
+app/views/o_propostas/index.html.erb:6
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:09:56 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 5.1ms | GC: 0.0ms)
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 11.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 8.2ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `o_orcamento_cont' for an instance of Ransack::Search):
+
+Causes:
+NoMethodError (undefined method `o_orcamento_cont' for an instance of Ransack::Search)
+    4: <div class="card">
+    5:   <div class="card-header d-flex">
+    6:     <%= search_form_for @q, html: { class: "d-flex gap-2" , autocomplete: "off"} do |f| %>
+    7:       <%= f.search_field :o_orcamento_cont, class: "form-control", placeholder: "Pesquisar" %>
+    8:       <%= f.button(type: 'submit', class: 'btn btn-info') { tag.i(class: 'ph-magnifying-glass') } %>
+    9:       <%= link_to  tag.i(class: 'ph-x-circle'), o_propostas_path, class: "btn btn-light" if params[:q] %>
+   10:       <% end %>
+  
+app/views/o_propostas/index.html.erb:7
+app/views/o_propostas/index.html.erb:6
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:10:03 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 20.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 15.4ms (2 queries, 0 cached) | GC: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `o_orcamento_cont' for an instance of Ransack::Search):
+
+Causes:
+NoMethodError (undefined method `o_orcamento_cont' for an instance of Ransack::Search)
+    4: <div class="card">
+    5:   <div class="card-header d-flex">
+    6:     <%= search_form_for @q, html: { class: "d-flex gap-2" , autocomplete: "off"} do |f| %>
+    7:       <%= f.search_field :o_orcamento_cont, class: "form-control", placeholder: "Pesquisar" %>
+    8:       <%= f.button(type: 'submit', class: 'btn btn-info') { tag.i(class: 'ph-magnifying-glass') } %>
+    9:       <%= link_to  tag.i(class: 'ph-x-circle'), o_propostas_path, class: "btn btn-light" if params[:q] %>
+   10:       <% end %>
+  
+app/views/o_propostas/index.html.erb:7
+app/views/o_propostas/index.html.erb:6
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:10:14 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.4ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 18.2ms | GC: 0.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.6ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 175.7ms | GC: 1.6ms)
+Completed 200 OK in 239ms (Views: 169.3ms | ActiveRecord: 16.6ms (4 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/o_propostas/new" for ::1 at 2025-09-18 04:10:16 -0400
+Processing by OPropostasController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (6.7ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos"[0m
+  ↳ app/views/o_propostas/_form.html.erb:20
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_propostas/_form.html.erb:25
+  [1m[36mOStatus Load (2.2ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_propostas/_form.html.erb:30
+  Rendered o_propostas/_form.html.erb (Duration: 122.5ms | GC: 4.6ms)
+  Rendered o_propostas/new.html.erb within layouts/application (Duration: 126.0ms | GC: 4.6ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.8ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 140.4ms | GC: 4.7ms)
+Completed 200 OK in 169ms (Views: 128.3ms | ActiveRecord: 15.6ms (5 queries, 0 cached) | GC: 5.4ms)
+
+
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:10:24 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.5ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 14.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (1.1ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | GC: 2.5ms)
+Completed 200 OK in 86ms (Views: 47.2ms | ActiveRecord: 2.8ms (4 queries, 0 cached) | GC: 2.8ms)
+
+
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:10:26 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.4ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 14.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (1.0ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | GC: 0.0ms)
+Completed 200 OK in 78ms (Views: 46.0ms | ActiveRecord: 6.0ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:10:27 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.6ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 9.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | GC: 0.9ms)
+Completed 200 OK in 63ms (Views: 29.6ms | ActiveRecord: 2.0ms (4 queries, 0 cached) | GC: 17.9ms)
+
+
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:10:29 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mOProposta Load (1.0ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 21.8ms | GC: 0.6ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | GC: 1.4ms)
+Completed 200 OK in 56ms (Views: 45.6ms | ActiveRecord: 2.5ms (4 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:10:32 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.4ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 20.5ms | GC: 0.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | GC: 2.3ms)
+Completed 200 OK in 72ms (Views: 38.2ms | ActiveRecord: 1.7ms (4 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:10:34 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.7ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 16.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | GC: 0.0ms)
+Completed 200 OK in 54ms (Views: 29.4ms | ActiveRecord: 2.3ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:11:50 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (134.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (55.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 12.5ms | GC: 0.0ms)
+  [1m[36mOProposta Load (3.9ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 166.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 7.9ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (8.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 397.2ms | GC: 70.5ms)
+Completed 200 OK in 6417ms (Views: 397.1ms | ActiveRecord: 199.8ms (4 queries, 0 cached) | GC: 4795.6ms)
+
+
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:12:21 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.9ms | GC: 0.0ms)
+  [1m[36mOProposta Load (1.6ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 31.3ms | GC: 0.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 4.4ms | GC: 0.1ms)
+  [1m[36mGTipoUsuario Load (0.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 107.9ms | GC: 1.3ms)
+Completed 200 OK in 403ms (Views: 106.8ms | ActiveRecord: 78.6ms (4 queries, 0 cached) | GC: 3.0ms)
+
+
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:12:24 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.7ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 10.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | GC: 16.5ms)
+Completed 200 OK in 85ms (Views: 48.8ms | ActiveRecord: 9.3ms (4 queries, 0 cached) | GC: 16.5ms)
+
+
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:12:25 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOProposta Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.5ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 23.7ms | GC: 1.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | GC: 1.5ms)
+Completed 200 OK in 50ms (Views: 37.1ms | ActiveRecord: 1.9ms (4 queries, 0 cached) | GC: 1.5ms)
+
+

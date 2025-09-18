@@ -11,6 +11,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.irregular 'o_orcamento', 'o_orcamentos'
   inflect.irregular 'o_tipo_solicitacao', 'o_tipos_solicitacao'
   inflect.irregular 'o_categoria_servico', 'o_categorias_servico'
+  inflect.irregular 'o_proposta', 'o_propostas'
 
 
 end

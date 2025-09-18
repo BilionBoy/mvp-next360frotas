@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  o_orcamento: one
+  user: one
+  o_status: one
+  valor_total: 9.99
+  itens: MyString
+  created_by: MyString
+  updated_by: MyString
+  deleted_at: 2025-09-18 04:03:03
+
+two:
+  o_orcamento: two
+  user: two
+  o_status: two
+  valor_total: 9.99
+  itens: MyString
+  created_by: MyString
+  updated_by: MyString
+  deleted_at: 2025-09-18 04:03:03

@@ -10,8 +10,6 @@ module LayoutByUser
   def set_layout_by_controller
     if devise_controller?
       self.class.layout 'devise_application'
-    elsif controller_name == 'home'
-      self.class.layout 'home_application'
     else
       self.class.layout 'application'
     end

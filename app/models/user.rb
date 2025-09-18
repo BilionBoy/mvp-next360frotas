@@ -8,7 +8,7 @@ class User < ApplicationRecord
   # Associações
   belongs_to :g_status
   belongs_to :g_tipo_usuario
-
+  has_many   :o_propostas
   # Validações básicas
   validates :nome, presence: true
   validates :cpf, presence: true, uniqueness: true

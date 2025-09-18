@@ -47,6 +47,9 @@ pt-BR:
       o_orcamento:
         one: "Orçamento"
         other: "Orçamentos"
+      o_proposta:
+        one: "Proposta"
+        other: "Propostas"
     attributes:
       g_centro_custo:
         descricao: "Descrição"

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :o_propostas
   resources :o_orcamentos
   root 'home#index'
   get 'home/index'
