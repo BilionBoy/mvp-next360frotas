@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_09_18_055548) do
+ActiveRecord::Schema[7.2].define(version: 2025_09_18_061122) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,6 +61,27 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_055548) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "g_veiculos", force: :cascade do |t|
+    t.string "placa"
+    t.string "modelo"
+    t.string "marca"
+    t.integer "ano"
+    t.string "cor"
+    t.decimal "km_atual"
+    t.string "status"
+    t.bigint "g_tipo_veiculo_id"
+    t.bigint "g_centro_custo_id"
+    t.datetime "criado_em"
+    t.datetime "atualizado_em"
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["g_centro_custo_id"], name: "index_g_veiculos_on_g_centro_custo_id"
+    t.index ["g_tipo_veiculo_id"], name: "index_g_veiculos_on_g_tipo_veiculo_id"
   end
 
   create_table "o_categorias_servico", force: :cascade do |t|
