@@ -14,8 +14,8 @@
         </button>
       </div>
     </div>
+
     <!-- SEARCH -->
-     <!-- Barra de pesquisa -->
     <div class="sidebar-section-body">
       <div class="form-control-feedback form-control-feedback-end">
         <input
@@ -30,69 +30,75 @@
         </div>
       </div>
     </div>
+
     <!-- NAVIGATION -->
     <div class="sidebar-section">
       <ul class="nav nav-sidebar pv-nav" data-nav-type="accordion" id="sidebar-items">
         <!-- SISTEMA MUNICIPAL -->
-        <li class="nav-item-header pv-nav-header">
-          <span>SISTEMA MUNICIPAL</span>
-        </li>
+        <li class="nav-item-header pv-nav-header"><span>SISTEMA MUNICIPAL</span></li>
         <li class="nav-item">
           <a href="<%= root_path %>" class="nav-link pv-nav-link active">
             <i class="ph-house-line"></i>
             <span>Página Inicial</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link pv-nav-link">
-            <i class="ph-users-three"></i>
-            <span>Cidadãos</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link pv-nav-link">
-            <i class="ph-file-text"></i>
-            <span>Documentos</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link pv-nav-link">
-            <i class="ph-chart-line-up"></i>
-            <span>Relatórios</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link pv-nav-link">
-            <i class="ph-calendar-check"></i>
-            <span>Agenda</span>
-          </a>
-        </li>
         <!-- ADMINISTRAÇÃO -->
-        <li class="nav-item-header pv-nav-header">
-          <span>ADMINISTRAÇÃO</span>
-        </li>
+        <li class="nav-item-header pv-nav-header"><span>ADMINISTRAÇÃO</span></li>
+
+      
+
+        <!-- Outros módulos -->
         <li class="nav-item">
-          <a href="#" class="nav-link pv-nav-link">
-            <i class="ph-gear-six"></i>
-            <span>Configurações</span>
+          <a href="<%= g_status_index_path %>" class="nav-link pv-nav-link">
+            <i class="ph-clipboard-text"></i>
+            <span>Status de Frota</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link pv-nav-link">
-            <i class="ph-shield-check"></i>
-            <span>Segurança</span>
+          <a href="<%= g_centro_custos_path %>" class="nav-link pv-nav-link">
+            <i class="ph-check-square"></i>
+            <span>Centros de Custo</span>
           </a>
         </li>
         <li class="nav-item">
+          <a href="<%= g_tipo_usuarios_path %>" class="nav-link pv-nav-link">
+            <i class="ph-user-gear"></i>
+            <span>Tipos de Usuário</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<%= o_status_index_path %>" class="nav-link pv-nav-link">
+            <i class="ph-check-square"></i>
+            <span>Status de Solicitação</span>
+          </a>
+        </li>
+
+  <!-- Referenciais -->
+        <li class="nav-item nav-item-submenu">
           <a href="#" class="nav-link pv-nav-link">
             <i class="ph-database"></i>
-            <span>Backup</span>
+            <span>Referenciais</span>
           </a>
+          <ul class="nav nav-group-sub">
+            <li class="nav-item">
+              <a href="<%= g_tipos_veiculos_path %>" class="nav-link">Tipos de Veículo</a>
+            </li>
+            <li class="nav-item">
+              <a href="<%= g_tipos_centro_custo_path %>" class="nav-link">Tipos de Centro de Custo</a>
+            </li>
+            <li class="nav-item">
+              <a href="<%= o_tipos_solicitacao_path %>" class="nav-link">Tipos de Solicitação</a>
+            </li>
+            <li class="nav-item">
+              <a href="<%= o_categorias_servico_path %>" class="nav-link">Categorias de Serviço</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
   </div>
 </div>
+
 <script>
   function filterSidebar() {
     const input = document.getElementById('sidebar-search-input');
@@ -139,6 +145,6 @@
     }
 
     const searchHint = document.querySelector('.pv-search-hint span');
-    searchHint.textContent = filter.length > 0 ? `${visibleCount} resultado(s) encontrado(s)` : 'Digite para filtrar opções';
+    if(searchHint) searchHint.textContent = filter.length > 0 ? `${visibleCount} resultado(s) encontrado(s)` : 'Digite para filtrar opções';
   }
 </script>

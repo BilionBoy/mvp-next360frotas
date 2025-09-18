@@ -47,6 +47,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a.nav-link {
+  color: white;
+}
 h1,
 h2,
 h3,

@@ -23427,3 +23427,576 @@ Processing by GCentroCustosController#index as HTML
 Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 1.7ms (3 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:04:32 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 8.2ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (3.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (2.1ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 415.4ms | GC: 29.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 6.1ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 10.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 533.5ms | GC: 37.5ms)
+Completed 500 Internal Server Error in 765ms (ActiveRecord: 170.7ms (3 queries, 0 cached) | GC: 40.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `g_tipo_veiculos_path' for an instance of #<Class:0x00007ad2c2c06060>):
+
+Causes:
+NameError (undefined local variable or method `g_tipo_veiculos_path' for an instance of #<Class:0x00007ad2c2c06060>)
+    53:           </a>
+    54:           <ul class="nav nav-group-sub">
+    55:             <li class="nav-item">
+    56:               <a href="<%= g_tipo_veiculos_path %>" class="nav-link">Tipos de Veículo</a>
+    57:             </li>
+    58:             <li class="nav-item">
+    59:               <a href="<%= g_tipos_centro_custo_path %>" class="nav-link">Tipos de Centro de Custo</a>
+  
+app/views/shared/sidebar/_sidebar.html.erb:56
+app/views/layouts/application.html.erb:42
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:04:50 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 47.6ms | GC: 1.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 4.2ms | GC: 0.4ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | GC: 1.3ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 10.6ms (3 queries, 0 cached) | GC: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `g_tipo_veiculos_index_path' for an instance of #<Class:0x00007ad2c2c41368>):
+
+Causes:
+NameError (undefined local variable or method `g_tipo_veiculos_index_path' for an instance of #<Class:0x00007ad2c2c41368>)
+    53:           </a>
+    54:           <ul class="nav nav-group-sub">
+    55:             <li class="nav-item">
+    56:               <a href="<%= g_tipo_veiculos_index_path %>" class="nav-link">Tipos de Veículo</a>
+    57:             </li>
+    58:             <li class="nav-item">
+    59:               <a href="<%= g_tipos_centro_custo_path %>" class="nav-link">Tipos de Centro de Custo</a>
+  
+app/views/shared/sidebar/_sidebar.html.erb:56
+app/views/layouts/application.html.erb:42
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:05:15 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.5ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 55.6ms | GC: 1.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 10.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 77.8ms | GC: 2.7ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 14.6ms (3 queries, 0 cached) | GC: 2.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"o_status"}, missing required keys: [:id]):
+
+Causes:
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"o_status"}, missing required keys: [:id])
+    87:           </a>
+    88:         </li>
+    89:         <li class="nav-item">
+    90:           <a href="<%= o_status_path %>" class="nav-link pv-nav-link">
+    91:             <i class="ph-check-square"></i>
+    92:             <span>Status de Solicitação</span>
+    93:           </a>
+  
+app/views/shared/sidebar/_sidebar.html.erb:90
+app/views/layouts/application.html.erb:42
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:05:32 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 5.2ms | GC: 3.2ms)
+  [1m[36mGCentroCusto Load (0.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 229.1ms | GC: 139.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 2.7ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 251.1ms | GC: 141.8ms)
+Completed 200 OK in 300ms (Views: 247.8ms | ActiveRecord: 14.3ms (3 queries, 0 cached) | GC: 167.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 02:05:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 02:05:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 02:05:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 02:05:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:06:53 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (25.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 8.0ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (2.1ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (1.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 198.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 4.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 904.6ms | GC: 296.1ms)
+Completed 200 OK in 1100ms (Views: 936.8ms | ActiveRecord: 28.9ms (3 queries, 0 cached) | GC: 296.1ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:07:00 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.3ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 47.1ms | GC: 32.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | GC: 32.2ms)
+Completed 200 OK in 68ms (Views: 56.2ms | ActiveRecord: 1.6ms (3 queries, 0 cached) | GC: 32.2ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:07:19 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 5.0ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.3ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 131.2ms | GC: 48.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 151.8ms | GC: 49.1ms)
+Completed 200 OK in 385ms (Views: 134.0ms | ActiveRecord: 109.6ms (3 queries, 0 cached) | GC: 49.1ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:07:24 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.3ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 21.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | GC: 0.7ms)
+Completed 200 OK in 47ms (Views: 33.6ms | ActiveRecord: 1.7ms (3 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:07:25 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (1.3ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 27.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | GC: 0.4ms)
+Completed 200 OK in 52ms (Views: 40.9ms | ActiveRecord: 2.7ms (3 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/g_status" for ::1 at 2025-09-18 02:07:25 -0400
+Processing by GStatusController#index as HTML
+  [1m[36mGStatus Count (11.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_status"[0m
+  ↳ app/controllers/g_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mGStatus Load (0.4ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_status/index.html.erb:25
+  Rendered g_status/index.html.erb within layouts/application (Duration: 31.6ms | GC: 0.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 224.8ms | GC: 178.1ms)
+Completed 200 OK in 254ms (Views: 224.4ms | ActiveRecord: 15.4ms (2 queries, 0 cached) | GC: 178.1ms)
+
+
+Started GET "/g_tipo_usuarios" for ::1 at 2025-09-18 02:07:26 -0400
+Processing by GTipoUsuariosController#index as HTML
+  [1m[36mGTipoUsuario Count (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_tipo_usuarios"[0m
+  ↳ app/controllers/g_tipo_usuarios_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_tipo_usuarios/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (1.7ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_tipo_usuarios/index.html.erb:25
+  Rendered g_tipo_usuarios/index.html.erb within layouts/application (Duration: 203.3ms | GC: 149.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 8.3ms | GC: 6.7ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 397.2ms | GC: 317.5ms)
+Started GET "/o_status" for ::1 at 2025-09-18 02:07:27 -0400
+Completed 200 OK in 574ms (Views: 429.4ms | ActiveRecord: 63.5ms (2 queries, 0 cached) | GC: 471.0ms)
+
+
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (4.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.0ms | GC: 1.2ms)
+  [1m[36mOStatus Load (0.3ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 109.7ms | GC: 83.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 117.2ms | GC: 84.3ms)
+Completed 200 OK in 179ms (Views: 119.3ms | ActiveRecord: 11.2ms (2 queries, 0 cached) | GC: 123.5ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 02:08:20 -0400
+Started GET "/o_status" for ::1 at 2025-09-18 02:08:21 -0400
+Processing by OStatusController#index as HTML
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.9ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.9ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 55.4ms | GC: 0.6ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.9ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 2.5ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 77.0ms | GC: 1.2ms)
+Completed 200 OK in 137ms (Views: 72.0ms | ActiveRecord: 40.2ms (2 queries, 0 cached) | GC: 1.7ms)
+
+
+  [1m[36mOStatus Count (10.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 33.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | GC: 0.5ms)
+Completed 200 OK in 352ms (Views: 43.3ms | ActiveRecord: 319.3ms (2 queries, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 02:08:33 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.8ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.8ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 37.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 2.0ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | GC: 12.1ms)
+Completed 200 OK in 96ms (Views: 56.9ms | ActiveRecord: 28.8ms (2 queries, 0 cached) | GC: 12.1ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 02:08:35 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.7ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 31.6ms | GC: 1.6ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | GC: 1.6ms)
+Completed 200 OK in 52ms (Views: 39.6ms | ActiveRecord: 2.2ms (2 queries, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 02:08:37 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.7ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 13.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | GC: 1.0ms)
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 1.4ms (2 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/g_tipo_usuarios" for ::1 at 2025-09-18 02:08:37 -0400
+Processing by GTipoUsuariosController#index as HTML
+  [1m[36mGTipoUsuario Count (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_tipo_usuarios"[0m
+  ↳ app/controllers/g_tipo_usuarios_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_tipo_usuarios/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (1.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_tipo_usuarios/index.html.erb:25
+  Rendered g_tipo_usuarios/index.html.erb within layouts/application (Duration: 18.5ms | GC: 0.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | GC: 0.8ms)
+Completed 200 OK in 50ms (Views: 25.6ms | ActiveRecord: 15.2ms (2 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:08:38 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (5.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (4.6ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 56.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 4.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | GC: 0.0ms)
+Completed 200 OK in 100ms (Views: 55.4ms | ActiveRecord: 19.0ms (3 queries, 0 cached) | GC: 3.3ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:08:46 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 15.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | GC: 0.0ms)
+Completed 200 OK in 30ms (Views: 23.8ms | ActiveRecord: 1.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:08:47 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 14.9ms | GC: 0.8ms)
+  Rendered shared/_navbar.html.erb (Duration: 5.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | GC: 0.8ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 1.5ms (3 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 02:08:48 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | GC: 1.3ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/g_status" for ::1 at 2025-09-18 02:08:49 -0400
+Processing by GStatusController#index as HTML
+  [1m[36mGStatus Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_status"[0m
+  ↳ app/controllers/g_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGStatus Load (0.5ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_status/index.html.erb:25
+  Rendered g_status/index.html.erb within layouts/application (Duration: 19.7ms | GC: 0.6ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | GC: 0.8ms)
+Completed 200 OK in 44ms (Views: 22.6ms | ActiveRecord: 9.2ms (2 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 02:08:50 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | GC: 0.5ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/g_tipo_usuarios" for ::1 at 2025-09-18 02:08:50 -0400
+Processing by GTipoUsuariosController#index as HTML
+  [1m[36mGTipoUsuario Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_tipo_usuarios"[0m
+  ↳ app/controllers/g_tipo_usuarios_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_tipo_usuarios/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (3.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_tipo_usuarios/index.html.erb:25
+  Rendered g_tipo_usuarios/index.html.erb within layouts/application (Duration: 14.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 24.4ms | ActiveRecord: 3.9ms (2 queries, 0 cached) | GC: 1.9ms)
+
+
+Started GET "/g_tipo_usuarios" for ::1 at 2025-09-18 02:09:12 -0400
+Processing by GTipoUsuariosController#index as HTML
+  [1m[36mGTipoUsuario Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_tipo_usuarios"[0m
+  ↳ app/controllers/g_tipo_usuarios_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_tipo_usuarios/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.6ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_tipo_usuarios/index.html.erb:25
+  Rendered g_tipo_usuarios/index.html.erb within layouts/application (Duration: 28.3ms | GC: 0.4ms)
+  Rendered shared/_navbar.html.erb (Duration: 4.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | GC: 0.7ms)
+Completed 200 OK in 64ms (Views: 49.7ms | ActiveRecord: 6.9ms (2 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/g_tipo_usuarios" for ::1 at 2025-09-18 02:09:19 -0400
+Processing by GTipoUsuariosController#index as HTML
+  [1m[36mGTipoUsuario Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_tipo_usuarios"[0m
+  ↳ app/controllers/g_tipo_usuarios_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_tipo_usuarios/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.6ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_tipo_usuarios/index.html.erb:25
+  Rendered g_tipo_usuarios/index.html.erb within layouts/application (Duration: 37.1ms | GC: 13.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 2.1ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | GC: 15.2ms)
+Completed 200 OK in 67ms (Views: 51.0ms | ActiveRecord: 6.4ms (2 queries, 0 cached) | GC: 15.2ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:09:33 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.7ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 51.9ms | GC: 1.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | GC: 1.2ms)
+Completed 200 OK in 75ms (Views: 53.5ms | ActiveRecord: 8.7ms (3 queries, 0 cached) | GC: 1.9ms)
+
+
+Started GET "/g_status" for ::1 at 2025-09-18 02:09:39 -0400
+Processing by GStatusController#index as HTML
+  [1m[36mGStatus Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_status"[0m
+  ↳ app/controllers/g_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGStatus Load (0.5ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_status/index.html.erb:25
+  Rendered g_status/index.html.erb within layouts/application (Duration: 37.6ms | GC: 0.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | GC: 0.6ms)
+Completed 200 OK in 61ms (Views: 40.9ms | ActiveRecord: 5.8ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/g_status" for ::1 at 2025-09-18 02:09:44 -0400
+Processing by GStatusController#index as HTML
+  [1m[36mGStatus Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_status"[0m
+  ↳ app/controllers/g_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGStatus Load (0.5ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_status/index.html.erb:25
+  Rendered g_status/index.html.erb within layouts/application (Duration: 16.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | GC: 0.0ms)
+Completed 200 OK in 32ms (Views: 24.5ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 02:09:50 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.6ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 24.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 17.4ms | GC: 16.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | GC: 16.6ms)
+Completed 200 OK in 64ms (Views: 48.0ms | ActiveRecord: 5.1ms (2 queries, 0 cached) | GC: 16.6ms)
+
+
