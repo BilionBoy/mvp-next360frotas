@@ -38,12 +38,19 @@ pt-BR:
       g_centro_custo:
         one: "Centro de Custo"
         other: "Centro de Custos"
-
+      g_veiculo:
+        one: "Veiculo"
+        other: "Veiculos"
+      g_condutor:
+        one: "Condutor"
+        other: "Condutores"
+      o_orcamento:
+        one: "Orçamento"
+        other: "Orçamentos"
     attributes:
       g_centro_custo:
         descricao: "Descrição"
         g_tipo_centro_custo_id: "Tipo de Centro de Custo"
-    
     errors:
       messages:
         record_invalid: "A validação falhou: %{errors}"

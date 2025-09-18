@@ -1,25 +1,58 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<%# app/views/devise/registrations/new.html.erb %>
+<div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center position-relative" style="background-color: #f5f5f5;">
+  <!-- Imagem de fundo -->
+  <div class="position-absolute w-100 h-100" style="top:0; left:0; z-index:0;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Prefeitura_de_Porto_Velho.jpg"
+         class="w-100 h-100 object-fit-cover opacity-25" alt="Prefeitura de Porto Velho">
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="card shadow-lg rounded-lg p-4 p-md-5 position-relative z-1 w-100" style="max-width: 900px;">
+    <div class="row g-0">
+      <!-- Painel lateral ilustrativo -->
+      <div class="col-md-5 d-none d-md-flex flex-column justify-content-center align-items-center bg-primary text-white rounded-start p-4">
+        <h2 class="fw-bold text-center mb-3">Bem-vindo ao Sistema Municipal</h2>
+        <p class="text-center">Gerencie usuários, veículos, centros de custo e solicitações de forma segura e intuitiva.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Coat_of_arms_of_Porto_Velho.png/800px-Coat_of_arms_of_Porto_Velho.png"
+             alt="Brasão Porto Velho" class="mt-4 img-fluid" style="max-width: 120px;">
+      </div>
+      <!-- Formulário -->
+      <div class="col-md-7 p-4 p-md-5">
+        <h2 class="mb-4 text-center">Cadastro de Usuário</h2>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'needs-validation', novalidate: true }) do |f| %>
+          <%= f.error_notification %>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <%= f.input :nome, required: true, label: "Nome completo", input_html: { class: "form-control" } %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :cpf, required: true, label: "CPF", input_html: { class: "form-control" } %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :telefone, label: "Telefone", input_html: { class: "form-control" } %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :email, required: true, label: "Email", input_html: { class: "form-control" } %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :password, required: true, label: "Senha", hint: ("#{@minimum_password_length} caracteres mínimo" if @minimum_password_length), input_html: { class: "form-control" } %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :password_confirmation, required: true, label: "Confirmação de Senha", input_html: { class: "form-control" } %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :g_tipo_usuario_id, collection: GTipoUsuario.all, label_method: :descricao, value_method: :id, prompt: "Selecione o tipo de usuário", required: true, input_html: { class: "form-select" } %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :g_status_id, collection: GStatus.all, label_method: :descricao, value_method: :id, prompt: "Selecione o status", required: true, input_html: { class: "form-select" } %>
+            </div>
+          </div>
+          <div class="mt-4 d-flex justify-content-center">
+            <%= f.button :submit, "Cadastrar", class: "btn btn-primary btn-lg px-5" %>
+          </div>
+        <% end %>
+        <div class="mt-3 text-center">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

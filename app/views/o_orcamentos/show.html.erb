@@ -1,0 +1,49 @@
+<div class="container">
+  <%= render "shared/notice" %>
+  <div class="card border-0 shadow shadow-sm">
+    <div class="card-header border-0 d-flex justify-content-between">
+      <span class="fs-4">Visualizar O Orcamento</span>
+    </div>
+    <div class="card-body">
+      <div id="<%= dom_id @o_orcamento %>">
+          <p>
+            <strong>User:</strong>
+            <%= @o_orcamento.user %>
+          </p>
+          <p>
+            <strong>G Veiculo:</strong>
+            <%= @o_orcamento.g_veiculo %>
+          </p>
+          <p>
+            <strong>G Centro Custo:</strong>
+            <%= @o_orcamento.g_centro_custo %>
+          </p>
+          <p>
+            <strong>O Tipo Solicitacao:</strong>
+            <%= @o_orcamento.o_tipo_solicitacao %>
+          </p>
+          <p>
+            <strong>O Status:</strong>
+            <%= @o_orcamento.o_status %>
+          </p>
+          <p>
+            <strong>Valor Total:</strong>
+            <%= @o_orcamento.valor_total %>
+          </p>
+          <p>
+            <strong>Itens:</strong>
+            <%= @o_orcamento.itens %>
+          </p>
+      </div>
+    </div>
+    <div class="card-footer border-0 d-flex justify-content-between">
+      <div>
+        <%= link_to edit_o_orcamento_path(@o_orcamento), class: "btn btn-primary" do %>
+        <i class="bi bi-pencil-square"></i> Editar
+        <% end %>
+        <%= link_to "Voltar", o_orcamentos_path, class: "btn btn-secondary" %>
+      </div>
+      <%= button_to "Deletar", @o_orcamento, method: :delete, class: "btn btn-outline-danger border-0" %>
+    </div>
+  </div>
+</div>

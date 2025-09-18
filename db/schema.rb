@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_09_18_061122) do
+ActiveRecord::Schema[7.2].define(version: 2025_09_18_070206) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +25,25 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_061122) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["g_tipo_centro_custo_id"], name: "index_g_centro_custos_on_g_tipo_centro_custo_id"
+  end
+
+  create_table "g_condutores", force: :cascade do |t|
+    t.string "nome"
+    t.string "email"
+    t.string "telefone"
+    t.string "senha"
+    t.string "cnh_numero"
+    t.string "cnh_categoria"
+    t.date "validade_cnh"
+    t.bigint "g_status_id"
+    t.datetime "criado_em"
+    t.datetime "atualizado_em"
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["g_status_id"], name: "index_g_condutores_on_g_status_id"
   end
 
   create_table "g_status", force: :cascade do |t|
@@ -93,6 +112,27 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_061122) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "o_orcamentos", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "g_veiculo_id", null: false
+    t.bigint "g_centro_custo_id", null: false
+    t.bigint "o_tipo_solicitacao_id", null: false
+    t.bigint "o_status_id", null: false
+    t.decimal "valor_total", precision: 15, scale: 2
+    t.jsonb "itens", default: []
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_o_orcamentos_on_deleted_at"
+    t.index ["g_centro_custo_id"], name: "index_o_orcamentos_on_g_centro_custo_id"
+    t.index ["g_veiculo_id"], name: "index_o_orcamentos_on_g_veiculo_id"
+    t.index ["o_status_id"], name: "index_o_orcamentos_on_o_status_id"
+    t.index ["o_tipo_solicitacao_id"], name: "index_o_orcamentos_on_o_tipo_solicitacao_id"
+    t.index ["user_id"], name: "index_o_orcamentos_on_user_id"
+  end
+
   create_table "o_status", force: :cascade do |t|
     t.string "descricao"
     t.string "created_by"
@@ -131,6 +171,12 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_061122) do
   end
 
   add_foreign_key "g_centro_custos", "g_tipos_centro_custo"
+  add_foreign_key "g_condutores", "g_status"
+  add_foreign_key "o_orcamentos", "g_centro_custos"
+  add_foreign_key "o_orcamentos", "g_veiculos"
+  add_foreign_key "o_orcamentos", "o_status"
+  add_foreign_key "o_orcamentos", "o_tipos_solicitacao"
+  add_foreign_key "o_orcamentos", "users"
   add_foreign_key "users", "g_status"
   add_foreign_key "users", "g_tipo_usuarios"
 end

@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  email: MyString
+  telefone: MyString
+  senha: MyString
+  cnh_numero: MyString
+  cnh_categoria: MyString
+  validade_cnh: 2025-09-18
+  g_status: one
+  criado_em: 2025-09-18 02:39:14
+  atualizado_em: 2025-09-18 02:39:14
+
+two:
+  nome: MyString
+  email: MyString
+  telefone: MyString
+  senha: MyString
+  cnh_numero: MyString
+  cnh_categoria: MyString
+  validade_cnh: 2025-09-18
+  g_status: two
+  criado_em: 2025-09-18 02:39:14
+  atualizado_em: 2025-09-18 02:39:14

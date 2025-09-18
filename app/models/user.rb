@@ -1,9 +1,30 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # Devise modules
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  # Adicione aqui quaisquer métodos ou validações padrão para seus modelos
+
+  # Associações
+  belongs_to :g_status
+  belongs_to :g_tipo_usuario
+
+  # Validações básicas
+  validates :nome, presence: true
+  validates :cpf, presence: true, uniqueness: true
+
+  # Métodos de conveniência para permissões
+  def admin?
+    g_tipo_usuario.descricao == "ADMIN" 
+  end
+
+  def gestor?
+    g_tipo_usuario.descricao == "GESTOR"
+  end
+
+  def fornecedor?
+    g_tipo_usuario.descricao == "FORNECEDOR"
+  end
+
+  # Adicione outros tipos conforme necessário
 end

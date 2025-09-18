@@ -1,32 +1,23 @@
-# frozen_string_literal: true
-
+# app/models/ability.rb
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-    # Define abilities for the user here. For example:
-    #
-    #   return unless user.present?
-    #   can :read, :all
-    #   return unless user.admin?
-    #   can :manage, :all
-    #
-    # The first argument to `can` is the action you are giving the user
-    # permission to do.
-    # If you pass :manage it will apply to every action. Other common actions
-    # here are :read, :create, :update and :destroy.
-    #
-    # The second argument is the resource the user can perform the action on.
-    # If you pass :all it will apply to every resource. Otherwise pass a Ruby
-    # class of the resource.
-    #
-    # The third argument is an optional hash of conditions to further filter the
-    # objects.
-    # For example, here the user can only update published articles.
-    #
-    #   can :update, Article, published: true
-    #
-    # See the wiki for details:
-    # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
+    return unless user.present?
+
+    if user.g_tipo_usuario.descricao == "ADMIN"
+      can :manage, :all
+      can :access, :sidebar_admin
+    elsif user.g_tipo_usuario.descricao == "GESTOR"
+      # Apenas acesso a certos módulos
+      can :read, GCondutor
+      can :read, GVeiculo
+      can :read, OOrcamento
+      can :access, :sidebar_gerente
+    else
+      # Usuários comuns
+      can :read, :home
+      can :access, :sidebar_user
+    end
   end
 end

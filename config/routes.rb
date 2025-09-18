@@ -1,17 +1,19 @@
 Rails.application.routes.draw do
-  resources :g_veiculos
+  resources :o_orcamentos
   root 'home#index'
   get 'home/index'
-  resources :g_centro_custos
   devise_for :users
+  resources :g_condutores
+  resources :g_veiculos
+  resources :g_centro_custos
   resources :g_tipo_usuarios
-  resources :o_categorias_servico
-  resources :o_tipos_solicitacao
-  resources :o_status
   resources :g_tipos_centro_custo
   resources :g_tipos_veiculos
   resources :g_status
   resources :g_tipos_veiculo
+  resources :o_categorias_servico
+  resources :o_tipos_solicitacao
+  resources :o_status
 
   # Rotas Scaffold
 

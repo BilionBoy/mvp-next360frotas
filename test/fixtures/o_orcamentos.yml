@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  g_veiculo: one
+  g_centro_custo: one
+  o_tipo_solicitacao: one
+  o_status: one
+  valor_total: 9.99
+  itens: MyString
+
+two:
+  user: two
+  g_veiculo: two
+  g_centro_custo: two
+  o_tipo_solicitacao: two
+  o_status: two
+  valor_total: 9.99
+  itens: MyString

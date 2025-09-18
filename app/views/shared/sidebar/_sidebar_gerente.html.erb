@@ -47,11 +47,11 @@
 
         <!-- Outros módulos -->
         <li class="nav-item">
-  <a href="<%= o_orcamentos_path %>" class="nav-link pv-nav-link">
-    <i class="ph-file-text"></i>
-    <span>Orçamentos</span>
-  </a>
-</li>
+         <a href="<%= g_veiculos_path %>" class="nav-link pv-nav-link">
+           <i class="ph-car"></i>
+           <span>Veículos</span>
+         </a>
+        </li>
         <li class="nav-item">
          <a href="<%= g_condutores_path %>" class="nav-link pv-nav-link">
            <i class="ph-user"></i>
@@ -59,10 +59,10 @@
          </a>
         </li>
         <li class="nav-item">
-         <a href="<%= g_veiculos_path %>" class="nav-link pv-nav-link">
-           <i class="ph-car"></i>
-           <span>Veículos</span>
-         </a>
+         <a href="<%= o_orcamentos_path %>" class="nav-link pv-nav-link">
+           <i class="ph-file-text"></i>
+           <span>Orçamentos</span>
+          </a>
         </li>
         <li class="nav-item">
           <a href="<%= g_status_index_path %>" class="nav-link pv-nav-link">
@@ -70,25 +70,6 @@
             <span>Status de Frota</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a href="<%= g_centro_custos_path %>" class="nav-link pv-nav-link">
-            <i class="ph-check-square"></i>
-            <span>Centros de Custo</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="<%= g_tipo_usuarios_path %>" class="nav-link pv-nav-link">
-            <i class="ph-user-gear"></i>
-            <span>Tipos de Usuário</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="<%= o_status_index_path %>" class="nav-link pv-nav-link">
-            <i class="ph-check-square"></i>
-            <span>Status de Solicitação</span>
-          </a>
-        </li>
-
   <!-- Referenciais -->
         <li class="nav-item nav-item-submenu">
           <a href="#" class="nav-link pv-nav-link">
@@ -97,20 +78,12 @@
           </a>
           <ul class="nav nav-group-sub">
             <li class="nav-item">
-              <a href="<%= g_tipos_veiculos_path %>" class="nav-link">Tipos de Veículo</a>
+              <a href="<%= g_centro_custos_path %>" class="nav-link">Centros de Custo</a>
             </li>
             <li class="nav-item">
-              <a href="<%= g_tipos_centro_custo_path %>" class="nav-link">Tipos de Centro de Custo</a>
+              <a href="<%= o_status_index_path %>" class="nav-link">Status de Solicitação</a>
             </li>
-            <li class="nav-item">
-              <a href="<%= o_tipos_solicitacao_path %>" class="nav-link">Tipos de Solicitação</a>
-            </li>
-            <li class="nav-item">
-              <a href="<%= o_categorias_servico_path %>" class="nav-link">Categorias de Serviço</a>
-            </li>
-          </ul>
         </li>
-      </ul>
     </div>
   </div>
 </div>
