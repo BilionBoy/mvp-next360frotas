@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :g_tipo_usuarios
+  resources :o_categorias_servico
+  resources :o_tipos_solicitacao
   resources :o_status
   resources :g_tipos_centro_custo
   resources :g_tipos_veiculos

@@ -26,6 +26,15 @@ pt-BR:
       o_status:
         one: "Status do Orçamento"
         other: "Status dos Orçamentos"
+      o_tipo_solicitacao:
+        one: "Tipo de Solicitação"
+        other: "Tipos de Solicitação"
+      o_categoria_servico:
+        one: "Categoria do Serviço"
+        other: "Categorias dos Serviços"
+      g_tipo_usuario:
+        one: "Tipo de Usuário"
+        other: "Tipos de Usuários"
     attributes:
       funcao:
         nome: "Nome"
