@@ -17,7 +17,7 @@
             <th class="text-center">Ações</th>
             <th><%= sort_link(@q, :user, t("activerecord.attributes.orcamento.user")) %></th>
             <th><%= sort_link(@q, :g_veiculo, t("activerecord.attributes.o_orcamento.veiculo")) %></th>
-            <th><%= sort_link(@q, :g_centro_custo, t("activerecord.attributes.o_orcamento.centro_custo")) %></th>
+            <th><%= sort_link(@q, :g_centro_custo, t("activerecord.attributes.o_orcamento.centro_custo_R$")) %></th>
             <th><%= sort_link(@q, :o_tipo_solicitacao, t("activerecord.attributes.o_orcamento.tipo_solicitacao")) %></th>
             <th><%= sort_link(@q, :o_status, t("activerecord.attributes.o_orcamento.status")) %></th>
             <th><%= sort_link(@q, :valor_total, t("activerecord.attributes.o_orcamento.valor_total")) %></th>
@@ -41,9 +41,9 @@
                         <i class="ph-trash-simple me-2"></i>Excluir
                       </a>
                     <% end %>
-                    <td><%= o_orcamento.user %></td>
-                    <td><%= o_orcamento.g_veiculo %></td>
-                    <td><%= o_orcamento.g_centro_custo.descricao %></td>
+                    <td><%= o_orcamento.user.nome %></td>
+                    <td><%= o_orcamento.g_veiculo.marca %></td>
+                    <td><%= " #{o_orcamento.g_centro_custo.nome} - #{o_orcamento.g_centro_custo.valor_inicial}" %></td>
                     <td><%= o_orcamento.o_tipo_solicitacao.descricao %></td>
                     <td><%= o_orcamento.o_status.descricao %></td>
                     <td><%= o_orcamento.valor_total %></td>

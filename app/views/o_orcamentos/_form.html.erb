@@ -12,31 +12,56 @@
     <div class="card-body">
       <%= f.error_notification %>
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-      <div class="row">
-        <div class="col-3">
-          <%= f.association :user, input_html: { class: "capitalize"}, placeholder: "User"  %>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <%= f.input :user_id,
+                      collection: User.all,
+                      label_method: :nome,
+                      value_method: :id,
+                      prompt: "Selecione o usuário",
+                      label: "Gestor" %>
         </div>
-        <div class="col-3">
-          <%= f.association :g_veiculo, input_html: { class: "capitalize"}, placeholder: "G veiculo"  %>
+        <div class="col-md-3">
+          <%= f.input :g_veiculo_id,
+                      collection: GVeiculo.all,
+                      label_method: :marca,
+                      value_method: :id,
+                      prompt: "Selecione o veículo",
+                      label: "Veículo" %>
         </div>
-        <div class="col-3">
-          <%= f.association :g_centro_custo, input_html: { class: "capitalize"}, placeholder: "G centro custo"  %>
+        <div class="col-md-3">
+          <%= f.input :g_centro_custo_id,
+                      collection: GCentroCusto.all,
+                      label_method: :nome,
+                      value_method: :id,
+                      prompt: "Selecione o centro de custo",
+                      label: "Centro de Custo" %>
         </div>
-        <div class="col-3">
-          <%= f.association :o_tipo_solicitacao, input_html: { class: "capitalize"}, placeholder: "O tipo solicitacao"  %>
+        <div class="col-md-3">
+          <%= f.input :o_tipo_solicitacao_id,
+                      collection: OTipoSolicitacao.all,
+                      label_method: :descricao,
+                      value_method: :id,
+                      prompt: "Selecione o tipo de solicitação",
+                      label: "Tipo de Solicitação" %>
         </div>
-        <div class="col-3">
-          <%= f.association :o_status, input_html: { class: "capitalize"}, placeholder: "O status"  %>
+        <div class="col-md-3">
+          <%= f.input :o_status_id,
+                      collection: OStatus.all,
+                      label_method: :descricao,
+                      value_method: :id,
+                      prompt: "Selecione o status",
+                      label: "Status" %>
         </div>
-        <div class="col-3">
-          <%= f.input :valor_total, input_html: { class: "capitalize"}, placeholder: "Valor total"  %>
+        <div class="col-md-3">
+          <%= f.input :valor_total, label: "Valor Total", input_html: { placeholder: "R$ 0,00" } %>
         </div>
-        <div class="col-3">
-          <%= f.input :itens, input_html: { class: "capitalize"}, placeholder: "Itens"  %>
+        <div class="col-md-3">
+          <%= f.input :itens, as: :text, label: "Itens", input_html: { placeholder: '[{"descricao": "peça", "quantidade": 1, "valor_unitario": 0}]' } %>
         </div>
       </div>
     </div>
-    <div class="card-footer">
+    <div class="card-footer d-flex justify-content-between">
       <%= btn_submit(f) %>
       <%= link_to "Voltar", o_orcamentos_path, class: "btn btn-light" %>
     </div>

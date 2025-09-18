@@ -26566,3 +26566,2419 @@ Processing by OPropostasController#index as HTML
 Completed 200 OK in 50ms (Views: 37.1ms | ActiveRecord: 1.9ms (4 queries, 0 cached) | GC: 1.5ms)
 
 
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:14:47 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Started DELETE "/users/sign_out" for ::1 at 2025-09-18 04:15:01 -0400
+  [1m[36mOProposta Count (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 8.8ms | GC: 0.0ms)
+  [1m[36mOProposta Load (1.7ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 76.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (6.0ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 9.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 262.3ms | GC: 0.0ms)
+Completed 200 OK in 1579ms (Views: 251.4ms | ActiveRecord: 421.4ms (4 queries, 0 cached) | GC: 17.2ms)
+
+
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 162ms (ActiveRecord: 14.2ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:15:02 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-09-18 04:15:02 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 42.5ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 148.8ms | GC: 13.5ms)
+Completed 200 OK in 165ms (Views: 160.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 13.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-09-18 04:15:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 116.1ms | GC: 1.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 1055.5ms | GC: 8.7ms)
+Completed 200 OK in 1876ms (Views: 1077.8ms | ActiveRecord: 526.9ms (0 queries, 0 cached) | GC: 19.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-09-18 04:16:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 114.0ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 218.5ms | GC: 0.0ms)
+Completed 200 OK in 641ms (Views: 234.6ms | ActiveRecord: 294.9ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-09-18 04:16:28 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (40.0ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:42
+  [1m[36mGStatus Load (32.1ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:45
+  Rendered devise/shared/_links.html.erb (Duration: 25.8ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 914.6ms | GC: 76.4ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 956.2ms | GC: 76.4ms)
+Completed 200 OK in 1742ms (Views: 764.3ms | ActiveRecord: 215.7ms (2 queries, 0 cached) | GC: 599.6ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-09-18 04:17:11 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (98.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:42
+  [1m[36mGStatus Load (2.1ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:45
+  Rendered devise/shared/_links.html.erb (Duration: 14.3ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 778.5ms | GC: 62.5ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 867.8ms | GC: 62.5ms)
+Completed 200 OK in 1141ms (Views: 794.8ms | ActiveRecord: 100.3ms (2 queries, 0 cached) | GC: 62.5ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-09-18 04:18:02 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (1.9ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:33
+  [1m[36mGStatus Load (1.0ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:34
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 139.6ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 255.0ms | GC: 13.7ms)
+Completed 200 OK in 519ms (Views: 268.1ms | ActiveRecord: 170.5ms (2 queries, 0 cached) | GC: 13.7ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-09-18 04:18:48 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (1.9ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:49
+  [1m[36mGStatus Load (2.3ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:52
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 101.1ms | GC: 1.4ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 143.0ms | GC: 1.4ms)
+Completed 200 OK in 279ms (Views: 154.6ms | ActiveRecord: 74.5ms (2 queries, 0 cached) | GC: 2.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-18 04:19:16 -0400
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Jeferson Andre", "cpf"=>"12321322", "telefone"=>"69993881869", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "g_tipo_usuario_id"=>"2", "g_status_id"=>"1"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (96.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mGStatus Load (3.1ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGTipoUsuario Load (2.1ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."cpf" = $1 LIMIT $2[0m  [["cpf", "12321322"], ["LIMIT", 1]]
+  [1m[36mUser Create (37.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "telefone", "cpf", "g_status_id", "g_tipo_usuario_id", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["email", "[FILTERED]"], ["encrypted_password", "[FILTERED]"], ["nome", "Jeferson Andre"], ["telefone", "69993881869"], ["cpf", "12321322"], ["g_status_id", 1], ["g_tipo_usuario_id", 2], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2025-09-18 08:19:16.031441"], ["updated_at", "2025-09-18 08:19:16.031441"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 841ms (ActiveRecord: 147.6ms (5 queries, 0 cached) | GC: 47.9ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:19:16 -0400
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 14.1ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 8.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 94.8ms | GC: 1.5ms)
+Completed 200 OK in 112ms (Views: 96.2ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:19:16 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 5.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 4.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | GC: 0.0ms)
+Completed 200 OK in 56ms (Views: 35.4ms | ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/g_veiculos" for ::1 at 2025-09-18 04:19:19 -0400
+Processing by GVeiculosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGVeiculo Count (27.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_veiculos"[0m
+  ↳ app/controllers/g_veiculos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_veiculos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 7.8ms | GC: 0.0ms)
+  [1m[36mGVeiculo Load (4.1ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_veiculos/index.html.erb:27
+  [1m[36mGTipoVeiculo Load (5.2ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:48
+  [1m[36mGCentroCusto Load (2.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:49
+  Rendered g_veiculos/index.html.erb within layouts/application (Duration: 1855.4ms | GC: 1566.4ms)
+  Rendered shared/_navbar.html.erb (Duration: 13.2ms | GC: 9.3ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 6.5ms | GC: 6.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 1982.3ms | GC: 1674.0ms)
+Completed 200 OK in 2086ms (Views: 1831.4ms | ActiveRecord: 191.6ms (6 queries, 0 cached) | GC: 1676.6ms)
+
+
+Started GET "/g_veiculos/new" for ::1 at 2025-09-18 04:19:24 -0400
+Processing by GVeiculosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering g_veiculos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 4.5ms | GC: 1.4ms)
+  [1m[36mGTipoVeiculo Load (0.7ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos"[0m
+  ↳ app/views/g_veiculos/_form.html.erb:38
+  [1m[36mGCentroCusto Load (0.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos"[0m
+  ↳ app/views/g_veiculos/_form.html.erb:41
+  Rendered g_veiculos/_form.html.erb (Duration: 122.1ms | GC: 3.7ms)
+  Rendered g_veiculos/new.html.erb within layouts/application (Duration: 124.7ms | GC: 3.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 153.5ms | GC: 3.9ms)
+Completed 200 OK in 171ms (Views: 158.2ms | ActiveRecord: 2.3ms (4 queries, 0 cached) | GC: 3.9ms)
+
+
+Started POST "/g_veiculos" for ::1 at 2025-09-18 04:19:48 -0400
+Processing by GVeiculosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "g_veiculo"=>{"placa"=>"1233", "modelo"=>"Sedan", "marca"=>"Sedan", "ano"=>"2024", "cor"=>"Preto", "km_atual"=>"0", "status"=>"Ativo", "g_tipo_veiculo_id"=>"1", "g_centro_custo_id"=>"1", "criado_em(3i)"=>"18", "criado_em(2i)"=>"9", "criado_em(1i)"=>"2025", "criado_em(4i)"=>"04", "criado_em(5i)"=>"19", "atualizado_em(3i)"=>"18", "atualizado_em(2i)"=>"9", "atualizado_em(1i)"=>"2025", "atualizado_em(4i)"=>"04", "atualizado_em(5i)"=>"19"}, "button"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/g_veiculos_controller.rb:22:in `create'
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/g_veiculos_controller.rb:22:in `create'
+  [1m[36mGTipoVeiculo Load (0.5ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/g_veiculos_controller.rb:22:in `create'
+  [1m[36mGVeiculo Create (3.4ms)[0m  [1m[32mINSERT INTO "g_veiculos" ("placa", "modelo", "marca", "ano", "cor", "km_atual", "status", "g_tipo_veiculo_id", "g_centro_custo_id", "criado_em", "atualizado_em", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"[0m  [["placa", "1233"], ["modelo", "Sedan"], ["marca", "Sedan"], ["ano", 2024], ["cor", "Preto"], ["km_atual", "0.0"], ["status", "Ativo"], ["g_tipo_veiculo_id", 1], ["g_centro_custo_id", 1], ["criado_em", "2025-09-18 08:19:00"], ["atualizado_em", "2025-09-18 08:19:00"], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 08:19:48.330249"], ["updated_at", "2025-09-18 08:19:48.330249"]]
+  ↳ app/controllers/g_veiculos_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/g_veiculos_controller.rb:22:in `create'
+Redirected to http://localhost:3000/g_veiculos
+Completed 302 Found in 78ms (ActiveRecord: 7.0ms (4 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/g_veiculos" for ::1 at 2025-09-18 04:19:48 -0400
+Processing by GVeiculosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGVeiculo Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_veiculos"[0m
+  ↳ app/controllers/g_veiculos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_veiculos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_veiculos/index.html.erb:27
+  [1m[36mGTipoVeiculo Load (0.3ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:48
+  [1m[36mGCentroCusto Load (0.3ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:49
+  [1m[36mGTipoVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:48
+  [1m[36mCACHE GCentroCusto Load (1.3ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:49
+  Rendered g_veiculos/index.html.erb within layouts/application (Duration: 27.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | GC: 0.0ms)
+Completed 200 OK in 52ms (Views: 39.3ms | ActiveRecord: 2.4ms (8 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/g_veiculos/2/edit" for ::1 at 2025-09-18 04:19:56 -0400
+Processing by GVeiculosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/g_veiculos_controller.rb:48:in `set_g_veiculo'
+  Rendering layout layouts/application.html.erb
+  Rendering g_veiculos/edit.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 8.5ms | GC: 0.0ms)
+  [1m[36mGTipoVeiculo Load (0.6ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos"[0m
+  ↳ app/views/g_veiculos/_form.html.erb:38
+  [1m[36mGCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos"[0m
+  ↳ app/views/g_veiculos/_form.html.erb:41
+  Rendered g_veiculos/_form.html.erb (Duration: 75.5ms | GC: 0.0ms)
+  Rendered g_veiculos/edit.html.erb within layouts/application (Duration: 76.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 84.9ms | GC: 0.0ms)
+Completed 200 OK in 112ms (Views: 84.0ms | ActiveRecord: 2.5ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/g_veiculos" for ::1 at 2025-09-18 04:19:57 -0400
+Processing by GVeiculosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGVeiculo Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_veiculos"[0m
+  ↳ app/controllers/g_veiculos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_veiculos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGVeiculo Load (0.7ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_veiculos/index.html.erb:27
+  [1m[36mGTipoVeiculo Load (0.5ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:48
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:49
+  [1m[36mGTipoVeiculo Load (0.7ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:48
+  [1m[36mCACHE GCentroCusto Load (1.0ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:49
+  Rendered g_veiculos/index.html.erb within layouts/application (Duration: 47.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | GC: 0.0ms)
+Completed 200 OK in 91ms (Views: 61.3ms | ActiveRecord: 3.8ms (8 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/g_condutores" for ::1 at 2025-09-18 04:19:58 -0400
+Processing by GCondutoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCondutor Count (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_condutores"[0m
+  ↳ app/controllers/g_condutores_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_condutores/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  [1m[36mGCondutor Load (1.0ms)[0m  [1m[34mSELECT "g_condutores".* FROM "g_condutores" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_condutores/index.html.erb:27
+  [1m[36mGStatus Load (0.4ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_condutores/index.html.erb:49
+  Rendered g_condutores/index.html.erb within layouts/application (Duration: 111.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 123.7ms | GC: 0.0ms)
+Completed 200 OK in 180ms (Views: 121.2ms | ActiveRecord: 10.3ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:20:01 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (4.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (1.2ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 17.5ms | GC: 1.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | GC: 1.0ms)
+Completed 200 OK in 59ms (Views: 31.8ms | ActiveRecord: 10.2ms (4 queries, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/o_orcamentos/new" for ::1 at 2025-09-18 04:20:02 -0400
+Processing by OOrcamentosController#new as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.7ms | GC: 0.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:17
+  [1m[36mGVeiculo Load (0.7ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:20
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:23
+  [1m[36mOTipoSolicitacao Load (2.5ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:26
+  [1m[36mOStatus Load (1.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:29
+  Rendered o_orcamentos/_form.html.erb (Duration: 98.4ms | GC: 1.7ms)
+  Rendered o_orcamentos/new.html.erb within layouts/application (Duration: 100.3ms | GC: 1.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 119.7ms | GC: 2.0ms)
+Completed 200 OK in 151ms (Views: 106.3ms | ActiveRecord: 21.5ms (7 queries, 0 cached) | GC: 2.8ms)
+
+
+Started GET "/o_orcamentos/new" for ::1 at 2025-09-18 04:21:00 -0400
+Processing by OOrcamentosController#new as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 45.1ms | GC: 0.0ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:17
+  [1m[36mGVeiculo Load (3.7ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:25
+  Rendered o_orcamentos/_form.html.erb (Duration: 911.9ms | GC: 673.9ms)
+  Rendered o_orcamentos/new.html.erb within layouts/application (Duration: 941.7ms | GC: 673.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 944.0ms | GC: 673.9ms)
+Completed 500 Internal Server Error in 1651ms (ActiveRecord: 199.8ms (3 queries, 0 cached) | GC: 673.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `descricao' for an instance of GVeiculo):
+
+Causes:
+NoMethodError (undefined method `descricao' for an instance of GVeiculo)
+    22:                       label: "Gestor" %>
+    23:         </div>
+    24:         <div class="col-md-3">
+    25:           <%= f.input :g_veiculo_id,
+    26:                       collection: GVeiculo.all,
+    27:                       label_method: :descricao,
+    28:                       value_method: :id,
+  
+app/views/o_orcamentos/_form.html.erb:25
+app/views/o_orcamentos/_form.html.erb:5
+app/views/o_orcamentos/new.html.erb:1
+Started GET "/o_orcamentos/new" for ::1 at 2025-09-18 04:21:51 -0400
+Processing by OOrcamentosController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 7.9ms | GC: 0.0ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:17
+  [1m[36mGVeiculo Load (1.5ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:25
+  [1m[36mGCentroCusto Load (2.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:33
+  Rendered o_orcamentos/_form.html.erb (Duration: 83.9ms | GC: 3.9ms)
+  Rendered o_orcamentos/new.html.erb within layouts/application (Duration: 87.1ms | GC: 3.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 87.5ms | GC: 3.9ms)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 116.9ms (4 queries, 0 cached) | GC: 10.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `descricao' for an instance of GCentroCusto):
+
+Causes:
+NoMethodError (undefined method `descricao' for an instance of GCentroCusto)
+    30:                       label: "Veículo" %>
+    31:         </div>
+    32:         <div class="col-md-3">
+    33:           <%= f.input :g_centro_custo_id,
+    34:                       collection: GCentroCusto.all,
+    35:                       label_method: :descricao,
+    36:                       value_method: :id,
+  
+app/views/o_orcamentos/_form.html.erb:33
+app/views/o_orcamentos/_form.html.erb:5
+app/views/o_orcamentos/new.html.erb:1
+Started GET "/o_orcamentos/new" for ::1 at 2025-09-18 04:22:15 -0400
+Processing by OOrcamentosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 4.7ms | GC: 0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:17
+  [1m[36mGVeiculo Load (0.6ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:25
+  [1m[36mGCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:33
+  [1m[36mOTipoSolicitacao Load (5.9ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:41
+  [1m[36mOStatus Load (1.3ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:49
+  Rendered o_orcamentos/_form.html.erb (Duration: 122.9ms | GC: 1.5ms)
+  Rendered o_orcamentos/new.html.erb within layouts/application (Duration: 124.9ms | GC: 1.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.9ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (2.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 3.2ms | GC: 1.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 232.0ms | GC: 27.1ms)
+Completed 200 OK in 277ms (Views: 202.7ms | ActiveRecord: 42.0ms (7 queries, 0 cached) | GC: 28.2ms)
+
+
+Started POST "/o_orcamentos" for ::1 at 2025-09-18 04:22:38 -0400
+Processing by OOrcamentosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "o_orcamento"=>{"user_id"=>"2", "g_veiculo_id"=>"1", "g_centro_custo_id"=>"1", "o_tipo_solicitacao_id"=>"1", "o_status_id"=>"2", "valor_total"=>"233333", "itens"=>"[]232"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:22:in `create'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/o_orcamentos_controller.rb:22:in `create'
+  [1m[36mGVeiculo Load (1.1ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/o_orcamentos_controller.rb:22:in `create'
+  [1m[36mGCentroCusto Load (1.0ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/o_orcamentos_controller.rb:22:in `create'
+  [1m[36mOTipoSolicitacao Load (0.4ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/o_orcamentos_controller.rb:22:in `create'
+  [1m[36mOStatus Load (2.1ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/o_orcamentos_controller.rb:22:in `create'
+  [1m[36mOOrcamento Create (24.5ms)[0m  [1m[32mINSERT INTO "o_orcamentos" ("user_id", "g_veiculo_id", "g_centro_custo_id", "o_tipo_solicitacao_id", "o_status_id", "valor_total", "itens", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["user_id", 2], ["g_veiculo_id", 1], ["g_centro_custo_id", 1], ["o_tipo_solicitacao_id", 1], ["o_status_id", 2], ["valor_total", "233333.0"], ["itens", "\"[]232\""], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 08:22:38.502805"], ["updated_at", "2025-09-18 08:22:38.502805"]]
+  ↳ app/controllers/o_orcamentos_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:22:in `create'
+Redirected to http://localhost:3000/o_orcamentos
+Completed 302 Found in 218ms (ActiveRecord: 34.0ms (7 queries, 0 cached) | GC: 120.8ms)
+
+
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:22:38 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.5ms | GC: 2.1ms)
+  [1m[36mOOrcamento Load (1.7ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 76.7ms | GC: 29.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 79.1ms | GC: 30.9ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 4.3ms (6 queries, 0 cached) | GC: 45.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `descricao' for an instance of GCentroCusto):
+
+Causes:
+NoMethodError (undefined method `descricao' for an instance of GCentroCusto)
+    43:                     <% end %>
+    44:                     <td><%= o_orcamento.user %></td>
+    45:                     <td><%= o_orcamento.g_veiculo %></td>
+    46:                     <td><%= o_orcamento.g_centro_custo.descricao %></td>
+    47:                     <td><%= o_orcamento.o_tipo_solicitacao.descricao %></td>
+    48:                     <td><%= o_orcamento.o_status.descricao %></td>
+    49:                     <td><%= o_orcamento.valor_total %></td>
+  
+app/views/o_orcamentos/index.html.erb:46
+app/views/o_orcamentos/index.html.erb:27
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:22:58 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 6.6ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.7ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.5ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (1.4ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.7ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 173.3ms | GC: 5.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 8.0ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 243.4ms | GC: 9.7ms)
+Completed 200 OK in 326ms (Views: 198.5ms | ActiveRecord: 59.8ms (9 queries, 0 cached) | GC: 25.0ms)
+
+
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:23:06 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.7ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.4ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.3ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.3ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.4ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.4ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 97.9ms | GC: 1.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 131.9ms | GC: 1.7ms)
+Completed 200 OK in 213ms (Views: 106.2ms | ActiveRecord: 45.8ms (9 queries, 0 cached) | GC: 2.2ms)
+
+
+Started GET "/g_status" for ::1 at 2025-09-18 04:23:14 -0400
+Processing by GStatusController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGStatus Count (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_status"[0m
+  ↳ app/controllers/g_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mGStatus Load (0.3ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_status/index.html.erb:25
+  Rendered g_status/index.html.erb within layouts/application (Duration: 36.8ms | GC: 19.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.9ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | GC: 20.1ms)
+Completed 200 OK in 85ms (Views: 45.3ms | ActiveRecord: 8.1ms (4 queries, 0 cached) | GC: 20.1ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 04:23:16 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCentroCusto Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (9.5ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 41.4ms | GC: 0.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | GC: 0.9ms)
+Completed 200 OK in 72ms (Views: 39.7ms | ActiveRecord: 17.3ms (5 queries, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 04:23:17 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOStatus Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.4ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 16.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | GC: 0.2ms)
+Completed 200 OK in 50ms (Views: 32.5ms | ActiveRecord: 3.5ms (4 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 04:23:18 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOStatus Count (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 9.5ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 4.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | GC: 0.0ms)
+Completed 200 OK in 56ms (Views: 33.0ms | ActiveRecord: 3.6ms (4 queries, 0 cached) | GC: 4.4ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 04:23:18 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCentroCusto Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 29.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | GC: 0.0ms)
+Completed 200 OK in 74ms (Views: 61.3ms | ActiveRecord: 2.8ms (5 queries, 0 cached) | GC: 15.8ms)
+
+
+Started GET "/g_status" for ::1 at 2025-09-18 04:23:19 -0400
+Processing by GStatusController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGStatus Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_status"[0m
+  ↳ app/controllers/g_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mGStatus Load (0.5ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_status/index.html.erb:25
+  Rendered g_status/index.html.erb within layouts/application (Duration: 8.0ms | GC: 0.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | GC: 0.7ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | GC: 1.5ms)
+Completed 200 OK in 38ms (Views: 22.4ms | ActiveRecord: 4.5ms (4 queries, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 04:23:21 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCentroCusto Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 16.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | GC: 0.4ms)
+Completed 200 OK in 45ms (Views: 26.2ms | ActiveRecord: 2.9ms (5 queries, 0 cached) | GC: 5.3ms)
+
+
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:23:25 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.6ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.5ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.4ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.4ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 32.3ms | GC: 0.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | GC: 2.6ms)
+Completed 200 OK in 58ms (Views: 44.5ms | ActiveRecord: 4.6ms (9 queries, 0 cached) | GC: 3.5ms)
+
+
+Started GET "/o_orcamentos/new" for ::1 at 2025-09-18 04:23:39 -0400
+Processing by OOrcamentosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:17
+  [1m[36mGVeiculo Load (0.6ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:25
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:33
+  [1m[36mOTipoSolicitacao Load (0.5ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:41
+  [1m[36mOStatus Load (0.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:49
+  Rendered o_orcamentos/_form.html.erb (Duration: 76.6ms | GC: 0.0ms)
+  Rendered o_orcamentos/new.html.erb within layouts/application (Duration: 79.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 88.4ms | GC: 0.0ms)
+Completed 200 OK in 103ms (Views: 86.3ms | ActiveRecord: 3.6ms (7 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:23:46 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.5ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.3ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.6ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 34.0ms | GC: 1.6ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | GC: 3.0ms)
+Completed 200 OK in 56ms (Views: 46.0ms | ActiveRecord: 4.1ms (9 queries, 0 cached) | GC: 3.0ms)
+
+
+Started GET "/o_orcamentos/1/edit" for ::1 at 2025-09-18 04:23:48 -0400
+Processing by OOrcamentosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Load (0.6ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/o_orcamentos_controller.rb:48:in `set_o_orcamento'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/edit.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:17
+  [1m[36mGVeiculo Load (0.6ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:25
+  [1m[36mGCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:33
+  [1m[36mOTipoSolicitacao Load (1.0ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:41
+  [1m[36mOStatus Load (0.6ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:49
+  Rendered o_orcamentos/_form.html.erb (Duration: 26.3ms | GC: 0.5ms)
+  Rendered o_orcamentos/edit.html.erb within layouts/application (Duration: 30.0ms | GC: 0.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.7ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | GC: 0.8ms)
+Completed 200 OK in 59ms (Views: 37.6ms | ActiveRecord: 5.1ms (8 queries, 0 cached) | GC: 1.6ms)
+
+
+Started PATCH "/o_orcamentos/1" for ::1 at 2025-09-18 04:23:50 -0400
+Processing by OOrcamentosController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "o_orcamento"=>{"user_id"=>"2", "g_veiculo_id"=>"2", "g_centro_custo_id"=>"1", "o_tipo_solicitacao_id"=>"1", "o_status_id"=>"2", "valor_total"=>"233333.0", "itens"=>"[]232"}, "button"=>"", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Load (0.7ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/o_orcamentos_controller.rb:48:in `set_o_orcamento'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:30:in `update'
+  [1m[36mGVeiculo Load (0.5ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/o_orcamentos_controller.rb:30:in `update'
+  [1m[36mOOrcamento Update (19.7ms)[0m  [1m[33mUPDATE "o_orcamentos" SET "g_veiculo_id" = $1, "updated_at" = $2 WHERE "o_orcamentos"."id" = $3[0m  [["g_veiculo_id", 2], ["updated_at", "2025-09-18 08:23:50.641869"], ["id", 1]]
+  ↳ app/controllers/o_orcamentos_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:30:in `update'
+Redirected to http://localhost:3000/o_orcamentos
+Completed 303 See Other in 127ms (ActiveRecord: 24.9ms (4 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:23:50 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.5ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.6ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.9ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.8ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 22.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 29.7ms | ActiveRecord: 5.2ms (9 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 04:23:57 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCentroCusto Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 11.7ms | GC: 1.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | GC: 1.3ms)
+Completed 200 OK in 66ms (Views: 24.2ms | ActiveRecord: 2.9ms (5 queries, 0 cached) | GC: 22.5ms)
+
+
+Started GET "/g_condutores" for ::1 at 2025-09-18 04:23:57 -0400
+Processing by GCondutoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCondutor Count (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_condutores"[0m
+  ↳ app/controllers/g_condutores_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_condutores/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mGCondutor Load (4.0ms)[0m  [1m[34mSELECT "g_condutores".* FROM "g_condutores" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_condutores/index.html.erb:27
+  [1m[36mGStatus Load (2.9ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_condutores/index.html.erb:49
+  Rendered g_condutores/index.html.erb within layouts/application (Duration: 53.4ms | GC: 1.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | GC: 1.5ms)
+Completed 200 OK in 93ms (Views: 60.2ms | ActiveRecord: 16.1ms (5 queries, 0 cached) | GC: 2.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:24:50 -0400
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:24:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/g_condutores" for ::1 at 2025-09-18 04:25:38 -0400
+Processing by GCondutoresController#index as HTML
+  [1m[36mUser Load (36.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCondutor Count (19.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_condutores"[0m
+  ↳ app/controllers/g_condutores_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_condutores/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 4.7ms | GC: 0.0ms)
+  [1m[36mGCondutor Load (2.1ms)[0m  [1m[34mSELECT "g_condutores".* FROM "g_condutores" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_condutores/index.html.erb:27
+  [1m[36mGStatus Load (1.5ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_condutores/index.html.erb:49
+  Rendered g_condutores/index.html.erb within layouts/application (Duration: 87.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (4.1ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 191.6ms | GC: 49.5ms)
+Completed 200 OK in 593ms (Views: 192.3ms | ActiveRecord: 62.9ms (5 queries, 0 cached) | GC: 132.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:25:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:25:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:25:43 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (4.3ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (1.6ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (2.3ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (1.9ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.7ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 70.0ms | GC: 6.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 82.1ms | GC: 7.6ms)
+Completed 200 OK in 103ms (Views: 71.3ms | ActiveRecord: 18.2ms (9 queries, 0 cached) | GC: 7.6ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:25:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:25:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:26:45 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (6.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 16.5ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (2.5ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (3.0ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (3.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 659.4ms | GC: 361.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 661.0ms | GC: 361.8ms)
+Completed 500 Internal Server Error in 1127ms (ActiveRecord: 188.8ms (6 queries, 0 cached) | GC: 361.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `codigo' for an instance of GCentroCusto):
+
+Causes:
+NoMethodError (undefined method `codigo' for an instance of GCentroCusto)
+    43:                     <% end %>
+    44:                     <td><%= o_orcamento.user.nome %></td>
+    45:                     <td><%= o_orcamento.g_veiculo.marca %></td>
+    46:                     <td><%= "#{o_orcamento.g_centro_custo.codigo} - #{o_orcamento.g_centro_custo.nome}" %></td>
+    47:                     <td><%= o_orcamento.o_tipo_solicitacao.descricao %></td>
+    48:                     <td><%= o_orcamento.o_status.descricao %></td>
+    49:                     <td><%= o_orcamento.valor_total %></td>
+  
+app/views/o_orcamentos/index.html.erb:46
+app/views/o_orcamentos/index.html.erb:27
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:26:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:27:15 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.2ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (1.0ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (1.0ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (3.3ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (2.1ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 185.6ms | GC: 38.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 5.3ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (1.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 266.3ms | GC: 38.4ms)
+Completed 200 OK in 395ms (Views: 238.7ms | ActiveRecord: 84.4ms (9 queries, 0 cached) | GC: 42.9ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:27:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:27:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:27:59 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (1.6ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (1.3ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.7ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 315.4ms | GC: 164.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.6ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 357.9ms | GC: 165.6ms)
+Completed 200 OK in 454ms (Views: 326.0ms | ActiveRecord: 87.8ms (9 queries, 0 cached) | GC: 165.8ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:28:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:28:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:28:29 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.4ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.6ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.3ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.3ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.3ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 103.7ms | GC: 2.6ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 131.7ms | GC: 2.6ms)
+Completed 200 OK in 170ms (Views: 108.2ms | ActiveRecord: 36.3ms (9 queries, 0 cached) | GC: 3.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:28:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:28:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:28:34 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.5ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.3ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.3ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 31.1ms | GC: 0.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | GC: 0.7ms)
+Completed 200 OK in 71ms (Views: 47.5ms | ActiveRecord: 4.6ms (9 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:28:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:28:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos/new" for ::1 at 2025-09-18 04:28:36 -0400
+Processing by OOrcamentosController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.2ms | GC: 0.5ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:17
+  [1m[36mGVeiculo Load (4.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:25
+  [1m[36mGCentroCusto Load (4.0ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:33
+  [1m[36mOTipoSolicitacao Load (1.8ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:41
+  [1m[36mOStatus Load (0.9ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:49
+  Rendered o_orcamentos/_form.html.erb (Duration: 73.0ms | GC: 0.9ms)
+  Rendered o_orcamentos/new.html.erb within layouts/application (Duration: 75.8ms | GC: 0.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 90.8ms | GC: 1.2ms)
+Completed 200 OK in 107ms (Views: 78.1ms | ActiveRecord: 15.3ms (7 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:28:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:28:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:28:45 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.4ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (1.3ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.4ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 25.5ms | GC: 1.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | GC: 4.1ms)
+Completed 200 OK in 65ms (Views: 36.8ms | ActiveRecord: 7.0ms (9 queries, 0 cached) | GC: 7.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:28:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:28:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/g_condutores" for ::1 at 2025-09-18 04:28:59 -0400
+Processing by GCondutoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCondutor Count (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_condutores"[0m
+  ↳ app/controllers/g_condutores_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_condutores/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mGCondutor Load (3.8ms)[0m  [1m[34mSELECT "g_condutores".* FROM "g_condutores" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_condutores/index.html.erb:27
+  [1m[36mGStatus Load (3.3ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_condutores/index.html.erb:49
+  Rendered g_condutores/index.html.erb within layouts/application (Duration: 71.7ms | GC: 15.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 85.2ms | GC: 17.1ms)
+Completed 200 OK in 115ms (Views: 67.4ms | ActiveRecord: 29.2ms (5 queries, 0 cached) | GC: 17.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:28:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:28:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/g_veiculos" for ::1 at 2025-09-18 04:29:01 -0400
+Processing by GVeiculosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGVeiculo Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_veiculos"[0m
+  ↳ app/controllers/g_veiculos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_veiculos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGVeiculo Load (1.6ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_veiculos/index.html.erb:27
+  [1m[36mGTipoVeiculo Load (2.8ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:48
+  [1m[36mGCentroCusto Load (0.3ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:49
+  [1m[36mGTipoVeiculo Load (0.3ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:48
+  [1m[36mCACHE GCentroCusto Load (0.0ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:49
+  Rendered g_veiculos/index.html.erb within layouts/application (Duration: 62.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 71.7ms | GC: 0.0ms)
+Completed 200 OK in 106ms (Views: 64.5ms | ActiveRecord: 10.8ms (8 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:29:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:29:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/g_condutores" for ::1 at 2025-09-18 04:29:02 -0400
+Processing by GCondutoresController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCondutor Count (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_condutores"[0m
+  ↳ app/controllers/g_condutores_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_condutores/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mGCondutor Load (0.8ms)[0m  [1m[34mSELECT "g_condutores".* FROM "g_condutores" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_condutores/index.html.erb:27
+  [1m[36mGStatus Load (0.4ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_condutores/index.html.erb:49
+  Rendered g_condutores/index.html.erb within layouts/application (Duration: 19.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | GC: 0.0ms)
+Completed 200 OK in 51ms (Views: 28.9ms | ActiveRecord: 4.8ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:29:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:29:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:29:05 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.5ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.3ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 25.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | GC: 0.0ms)
+Completed 200 OK in 55ms (Views: 35.3ms | ActiveRecord: 4.6ms (9 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:29:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:29:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/g_condutores" for ::1 at 2025-09-18 04:29:09 -0400
+Processing by GCondutoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCondutor Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_condutores"[0m
+  ↳ app/controllers/g_condutores_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_condutores/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mGCondutor Load (1.1ms)[0m  [1m[34mSELECT "g_condutores".* FROM "g_condutores" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_condutores/index.html.erb:27
+  [1m[36mGStatus Load (1.2ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_condutores/index.html.erb:49
+  Rendered g_condutores/index.html.erb within layouts/application (Duration: 12.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 19.3ms | ActiveRecord: 4.1ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:29:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:29:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:29:10 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.4ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.4ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.4ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 18.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 30.9ms | ActiveRecord: 3.6ms (9 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:29:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:29:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/g_status" for ::1 at 2025-09-18 04:29:10 -0400
+Processing by GStatusController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGStatus Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_status"[0m
+  ↳ app/controllers/g_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mGStatus Load (2.9ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_status/index.html.erb:25
+  Rendered g_status/index.html.erb within layouts/application (Duration: 10.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 16.5ms | ActiveRecord: 4.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:29:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:29:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/g_condutores" for ::1 at 2025-09-18 04:29:11 -0400
+Processing by GCondutoresController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGCondutor Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_condutores"[0m
+  ↳ app/controllers/g_condutores_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_condutores/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mGCondutor Load (0.4ms)[0m  [1m[34mSELECT "g_condutores".* FROM "g_condutores" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_condutores/index.html.erb:27
+  [1m[36mGStatus Load (0.3ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_condutores/index.html.erb:49
+  Rendered g_condutores/index.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 14.8ms | ActiveRecord: 3.1ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:29:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:29:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2025-09-18 04:29:34 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 311ms (ActiveRecord: 7.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:29:35 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 48ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-09-18 04:29:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 137.1ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 773.1ms | GC: 477.4ms)
+Completed 200 OK in 849ms (Views: 808.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 477.4ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:29:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/users/sign_up" for ::1 at 2025-09-18 04:29:38 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (8.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:49
+  [1m[36mGStatus Load (0.8ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:52
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 87.9ms | GC: 3.1ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 92.4ms | GC: 3.1ms)
+Completed 200 OK in 107ms (Views: 93.4ms | ActiveRecord: 9.2ms (2 queries, 0 cached) | GC: 3.1ms)
+
+
+Started POST "/users" for ::1 at 2025-09-18 04:29:59 -0400
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Fornecedor", "cpf"=>"01230223", "telefone"=>"12121212", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "g_tipo_usuario_id"=>"3", "g_status_id"=>"1"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (13.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mGStatus Load (0.9ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGTipoUsuario Load (0.7ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."cpf" = $1 LIMIT $2[0m  [["cpf", "01230223"], ["LIMIT", 1]]
+  [1m[36mUser Create (48.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "telefone", "cpf", "g_status_id", "g_tipo_usuario_id", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["email", "[FILTERED]"], ["encrypted_password", "[FILTERED]"], ["nome", "Fornecedor"], ["telefone", "12121212"], ["cpf", "01230223"], ["g_status_id", 1], ["g_tipo_usuario_id", 3], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2025-09-18 08:29:59.453545"], ["updated_at", "2025-09-18 08:29:59.453545"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 511ms (ActiveRecord: 72.1ms (5 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:29:59 -0400
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 12.1ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 118.5ms | GC: 0.0ms)
+Completed 200 OK in 157ms (Views: 126.9ms | ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 15.6ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:29:59 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 24.7ms | ActiveRecord: 1.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:30:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:30:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:30:05 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOProposta Count (7.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.9ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 19.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | GC: 0.0ms)
+Completed 200 OK in 83ms (Views: 33.2ms | ActiveRecord: 27.7ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:30:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:30:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas/new" for ::1 at 2025-09-18 04:30:08 -0400
+Processing by OPropostasController#new as HTML
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (2.3ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos"[0m
+  ↳ app/views/o_propostas/_form.html.erb:20
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_propostas/_form.html.erb:25
+  [1m[36mOStatus Load (2.2ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_propostas/_form.html.erb:30
+  Rendered o_propostas/_form.html.erb (Duration: 90.5ms | GC: 0.0ms)
+  Rendered o_propostas/new.html.erb within layouts/application (Duration: 92.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 121.9ms | GC: 19.8ms)
+Completed 200 OK in 216ms (Views: 118.0ms | ActiveRecord: 32.9ms (5 queries, 0 cached) | GC: 19.8ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:30:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:30:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas/new" for ::1 at 2025-09-18 04:31:12 -0400
+Processing by OPropostasController#new as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 11.8ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (3.2ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos"[0m
+  ↳ app/views/o_propostas/_form.html.erb:18:in `map'
+  [1m[36mGVeiculo Load (5.1ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/_form.html.erb:18
+  [1m[36mUser Load (21.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "g_tipo_usuarios" ON "g_tipo_usuarios"."id" = "users"."g_tipo_usuario_id" WHERE "g_tipo_usuarios"."descricao" = $1[0m  [["descricao", "FORNECEDOR"]]
+  ↳ app/views/o_propostas/_form.html.erb:25:in `map'
+  [1m[36mOStatus Load (1.2ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_propostas/_form.html.erb:32:in `map'
+  Rendered o_propostas/_form.html.erb (Duration: 746.2ms | GC: 386.0ms)
+  Rendered o_propostas/new.html.erb within layouts/application (Duration: 751.0ms | GC: 386.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (1.1ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 822.4ms | GC: 387.1ms)
+Completed 200 OK in 1457ms (Views: 787.3ms | ActiveRecord: 186.7ms (6 queries, 0 cached) | GC: 387.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:31:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:31:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started POST "/o_propostas" for ::1 at 2025-09-18 04:31:49 -0400
+Processing by OPropostasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "o_proposta"=>{"o_orcamento_id"=>"1", "user_id"=>"3", "o_status_id"=>"2", "valor_total"=>"2323", "itens"=>"2323"}, "button"=>""}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/o_propostas_controller.rb:22:in `create'
+  [1m[36mOOrcamento Load (3.3ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/o_propostas_controller.rb:22:in `create'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/o_propostas_controller.rb:22:in `create'
+  [1m[36mOStatus Load (3.6ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/o_propostas_controller.rb:22:in `create'
+  [1m[36mOProposta Create (33.1ms)[0m  [1m[32mINSERT INTO "o_propostas" ("o_orcamento_id", "user_id", "o_status_id", "valor_total", "itens", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["o_orcamento_id", 1], ["user_id", 3], ["o_status_id", 2], ["valor_total", "2323.0"], ["itens", "2323"], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 08:31:49.229219"], ["updated_at", "2025-09-18 08:31:49.229219"]]
+  ↳ app/controllers/o_propostas_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/o_propostas_controller.rb:22:in `create'
+Redirected to http://localhost:3000/o_propostas
+Completed 302 Found in 195ms (ActiveRecord: 49.0ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:31:49 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOProposta Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.7ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:40
+  [1m[36mOOrcamento Load (0.6ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:58
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:61
+  [1m[36mOStatus Load (0.3ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:64
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 47.1ms | GC: 4.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (2.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 66.3ms | GC: 6.6ms)
+Completed 200 OK in 208ms (Views: 63.9ms | ActiveRecord: 5.9ms (7 queries, 0 cached) | GC: 126.5ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:31:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:31:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:32:30 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOProposta Count (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 5.9ms | GC: 0.0ms)
+  [1m[36mOProposta Load (1.1ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:26
+  [1m[36mOOrcamento Load (2.2ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:44
+  [1m[36mOStatus Load (0.7ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:45
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 190.3ms | GC: 11.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 6.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.6ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 272.3ms | GC: 11.9ms)
+Completed 200 OK in 641ms (Views: 275.9ms | ActiveRecord: 152.7ms (7 queries, 0 cached) | GC: 25.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:32:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:32:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:33:58 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOProposta Count (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 8.0ms | GC: 0.0ms)
+  [1m[36mOProposta Load (1.2ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:26
+  [1m[36mOOrcamento Load (3.1ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mGVeiculo Load (8.3ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:44
+  [1m[36mOStatus Load (0.6ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:45
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 299.4ms | GC: 26.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (3.7ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 385.7ms | GC: 26.1ms)
+Completed 200 OK in 713ms (Views: 345.6ms | ActiveRecord: 173.9ms (8 queries, 0 cached) | GC: 31.4ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:34:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:34:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:34:22 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOProposta Count (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.5ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.7ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:26
+  [1m[36mOOrcamento Load (0.6ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mGVeiculo Load (0.6ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:44
+  [1m[36mOStatus Load (0.4ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:45
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 827.9ms | GC: 694.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 16.1ms | GC: 13.8ms)
+  [1m[36mGTipoUsuario Load (0.8ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 9.1ms | GC: 7.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 1435.9ms | GC: 1249.0ms)
+Completed 200 OK in 1723ms (Views: 1421.1ms | ActiveRecord: 47.0ms (8 queries, 0 cached) | GC: 1445.4ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:34:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:34:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas/new" for ::1 at 2025-09-18 04:34:31 -0400
+Processing by OPropostasController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 5.7ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (1.1ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos"[0m
+  ↳ app/views/o_propostas/_form.html.erb:18:in `map'
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/_form.html.erb:18
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "g_tipo_usuarios" ON "g_tipo_usuarios"."id" = "users"."g_tipo_usuario_id" WHERE "g_tipo_usuarios"."descricao" = $1[0m  [["descricao", "FORNECEDOR"]]
+  ↳ app/views/o_propostas/_form.html.erb:25:in `map'
+  [1m[36mOStatus Load (1.1ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_propostas/_form.html.erb:32:in `map'
+  Rendered o_propostas/_form.html.erb (Duration: 66.3ms | GC: 0.4ms)
+  Rendered o_propostas/new.html.erb within layouts/application (Duration: 67.6ms | GC: 0.4ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.1ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 81.6ms | GC: 0.4ms)
+Completed 200 OK in 103ms (Views: 75.3ms | ActiveRecord: 9.5ms (6 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:34:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:34:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:34:58 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOProposta Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 7.9ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.4ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:26
+  [1m[36mOOrcamento Load (0.2ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mGVeiculo Load (0.3ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:44
+  [1m[36mOStatus Load (0.2ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:45
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 118.2ms | GC: 17.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 144.2ms | GC: 18.4ms)
+Completed 200 OK in 201ms (Views: 125.6ms | ActiveRecord: 30.3ms (8 queries, 0 cached) | GC: 18.4ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:34:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:34:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:35:22 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (3.0ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (4.1ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (1.8ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.3ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 85.0ms | GC: 2.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | GC: 2.4ms)
+Completed 200 OK in 113ms (Views: 78.1ms | ActiveRecord: 20.5ms (9 queries, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:35:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:35:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:35:24 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOProposta Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mOProposta Load (0.4ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:26
+  [1m[36mOOrcamento Load (0.3ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:44
+  [1m[36mOStatus Load (0.4ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:45
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 21.5ms | GC: 0.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | GC: 3.4ms)
+Completed 200 OK in 53ms (Views: 31.5ms | ActiveRecord: 4.2ms (8 queries, 0 cached) | GC: 3.6ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:35:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:35:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:35:25 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (0.5ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (0.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (0.3ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (0.4ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (0.4ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 29.0ms | GC: 2.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | GC: 2.3ms)
+Completed 200 OK in 49ms (Views: 35.8ms | ActiveRecord: 3.7ms (9 queries, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:35:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:35:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos/new" for ::1 at 2025-09-18 04:36:35 -0400
+Processing by OOrcamentosController#new as HTML
+  [1m[36mUser Load (28.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 22.8ms | GC: 0.0ms)
+  [1m[36mUser Load (33.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:17
+  [1m[36mGVeiculo Load (9.9ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:25
+  [1m[36mGCentroCusto Load (5.2ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:33
+  [1m[36mOTipoSolicitacao Load (3.4ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:41
+  [1m[36mOStatus Load (1.8ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status"[0m
+  ↳ app/views/o_orcamentos/_form.html.erb:49
+  Rendered o_orcamentos/_form.html.erb (Duration: 604.4ms | GC: 0.0ms)
+  Rendered o_orcamentos/new.html.erb within layouts/application (Duration: 636.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 5.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (2.0ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 802.7ms | GC: 0.0ms)
+Completed 200 OK in 1271ms (Views: 777.9ms | ActiveRecord: 83.4ms (7 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:36:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:36:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:38:41 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (27.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOProposta Count (26.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 7.8ms | GC: 0.0ms)
+  [1m[36mOProposta Load (2.9ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:26
+  [1m[36mOOrcamento Load (4.7ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mGVeiculo Load (2.8ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:44
+  [1m[36mOStatus Load (2.8ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:45
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 162.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.9ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (1.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 224.3ms | GC: 0.0ms)
+Completed 200 OK in 636ms (Views: 222.4ms | ActiveRecord: 69.5ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:38:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:38:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_propostas" for ::1 at 2025-09-18 04:39:53 -0400
+Processing by OPropostasController#index as HTML
+  [1m[36mUser Load (35.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOProposta Count (25.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_propostas"[0m
+  ↳ app/controllers/o_propostas_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_propostas/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 19.8ms | GC: 0.0ms)
+  [1m[36mOProposta Load (3.0ms)[0m  [1m[34mSELECT "o_propostas".* FROM "o_propostas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_propostas/index.html.erb:26
+  [1m[36mOOrcamento Load (2.4ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" WHERE "o_orcamentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mGVeiculo Load (3.0ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:43
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:44
+  [1m[36mOStatus Load (0.8ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_propostas/index.html.erb:45
+  Rendered o_propostas/index.html.erb within layouts/application (Duration: 381.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 8.1ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (2.9ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_fornecedor.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 794.2ms | GC: 0.0ms)
+Completed 200 OK in 1397ms (Views: 822.4ms | ActiveRecord: 72.4ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:39:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:39:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2025-09-18 04:40:40 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 670ms (ActiveRecord: 25.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:40:42 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 36ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-09-18 04:40:42 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 546.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 730.0ms | GC: 0.0ms)
+Completed 200 OK in 930ms (Views: 852.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:40:43 -0400
+Started GET "/users/password/new" for ::1 at 2025-09-18 04:40:45 -0400
+Started GET "/users/sign_up" for ::1 at 2025-09-18 04:40:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/devise_application
+  Rendered devise/shared/_links.html.erb (Duration: 8.0ms | GC: 0.0ms)
+  Rendered devise/passwords/new.html.erb within layouts/devise_application (Duration: 51.2ms | GC: 3.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 126.5ms | GC: 26.7ms)
+Completed 200 OK in 170ms (Views: 132.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 31.7ms)
+
+
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (287.6ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:49
+  [1m[36mGStatus Load (12.1ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:52
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 634.0ms | GC: 95.6ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 640.0ms | GC: 95.6ms)
+Completed 200 OK in 656ms (Views: 211.9ms | ActiveRecord: 435.6ms (2 queries, 0 cached) | GC: 95.6ms)
+
+
+Started POST "/users" for ::1 at 2025-09-18 04:41:13 -0400
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Joao ", "cpf"=>"02588972277", "telefone"=>"12321312", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "g_tipo_usuario_id"=>"2", "g_status_id"=>"1"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (21.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mGStatus Load (4.6ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGTipoUsuario Load (1.7ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."cpf" = $1 LIMIT $2[0m  [["cpf", "02588972277"], ["LIMIT", 1]]
+  [1m[36mUser Create (31.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "telefone", "cpf", "g_status_id", "g_tipo_usuario_id", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["email", "[FILTERED]"], ["encrypted_password", "[FILTERED]"], ["nome", "Joao "], ["telefone", "12321312"], ["cpf", "02588972277"], ["g_status_id", 1], ["g_tipo_usuario_id", 2], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2025-09-18 08:41:14.239991"], ["updated_at", "2025-09-18 08:41:14.239991"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 481ms (ActiveRecord: 66.7ms (5 queries, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:41:14 -0400
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 49.8ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 3.8ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:41:14 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.5ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 24.6ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:41:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:41:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/g_veiculos" for ::1 at 2025-09-18 04:41:19 -0400
+Processing by GVeiculosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mGVeiculo Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_veiculos"[0m
+  ↳ app/controllers/g_veiculos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_veiculos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mGVeiculo Load (2.4ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_veiculos/index.html.erb:27
+  [1m[36mGTipoVeiculo Load (3.4ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:48
+  [1m[36mGCentroCusto Load (4.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:49
+  [1m[36mGTipoVeiculo Load (0.8ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" WHERE "g_tipos_veiculos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:48
+  [1m[36mCACHE GCentroCusto Load (0.0ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_veiculos/index.html.erb:49
+  Rendered g_veiculos/index.html.erb within layouts/application (Duration: 99.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar_gerente.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 117.7ms | GC: 0.0ms)
+Completed 200 OK in 151ms (Views: 102.2ms | ActiveRecord: 20.9ms (8 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:41:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:41:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2025-09-18 04:41:50 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 206ms (ActiveRecord: 8.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:41:51 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-09-18 04:41:51 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 78.7ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 115.1ms | GC: 0.0ms)
+Completed 200 OK in 145ms (Views: 128.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:41:51 -0400
+Started GET "/users/sign_up" for ::1 at 2025-09-18 04:41:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (23.1ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:49
+  [1m[36mGStatus Load (11.3ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:52
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 92.7ms | GC: 29.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 108.0ms | GC: 29.3ms)
+Completed 200 OK in 137ms (Views: 82.5ms | ActiveRecord: 34.3ms (2 queries, 0 cached) | GC: 32.4ms)
+
+
+Started POST "/users" for ::1 at 2025-09-18 04:42:21 -0400
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Admin", "cpf"=>"898923921", "telefone"=>"6993881823", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "g_tipo_usuario_id"=>"1", "g_status_id"=>"1"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (21.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mGStatus Load (0.9ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGTipoUsuario Load (0.8ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."cpf" = $1 LIMIT $2[0m  [["cpf", "898923921"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (0.7ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:49
+  [1m[36mGStatus Load (0.6ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:52
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 111.8ms | GC: 3.8ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 114.9ms | GC: 3.8ms)
+Completed 422 Unprocessable Content in 466ms (Views: 114.7ms | ActiveRecord: 27.3ms (6 queries, 0 cached) | GC: 7.8ms)
+
+
+Started POST "/users" for ::1 at 2025-09-18 04:42:27 -0400
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Admin", "cpf"=>"898923921", "telefone"=>"6993881823", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "g_tipo_usuario_id"=>"1", "g_status_id"=>"1"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mGStatus Load (0.4ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status" WHERE "g_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGTipoUsuario Load (0.6ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."cpf" = $1 LIMIT $2[0m  [["cpf", "898923921"], ["LIMIT", 1]]
+  [1m[36mUser Create (6.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nome", "telefone", "cpf", "g_status_id", "g_tipo_usuario_id", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["email", "[FILTERED]"], ["encrypted_password", "[FILTERED]"], ["nome", "Admin"], ["telefone", "6993881823"], ["cpf", "898923921"], ["g_status_id", 1], ["g_tipo_usuario_id", 1], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2025-09-18 08:42:27.568263"], ["updated_at", "2025-09-18 08:42:27.568263"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 299ms (ActiveRecord: 14.7ms (5 queries, 0 cached) | GC: 5.6ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:42:27 -0400
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 18.1ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-18 04:42:27 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 19.3ms | ActiveRecord: 7.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:42:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:42:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/o_orcamentos" for ::1 at 2025-09-18 04:42:30 -0400
+Processing by OOrcamentosController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOOrcamento Count (5.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_orcamentos"[0m
+  ↳ app/controllers/o_orcamentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_orcamentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOOrcamento Load (3.2ms)[0m  [1m[34mSELECT "o_orcamentos".* FROM "o_orcamentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_orcamentos/index.html.erb:27
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:44
+  [1m[36mGVeiculo Load (1.8ms)[0m  [1m[34mSELECT "g_veiculos".* FROM "g_veiculos" WHERE "g_veiculos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:45
+  [1m[36mGCentroCusto Load (2.9ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:46
+  [1m[36mOTipoSolicitacao Load (2.4ms)[0m  [1m[34mSELECT "o_tipos_solicitacao".* FROM "o_tipos_solicitacao" WHERE "o_tipos_solicitacao"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:47
+  [1m[36mOStatus Load (1.6ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/o_orcamentos/index.html.erb:48
+  Rendered o_orcamentos/index.html.erb within layouts/application (Duration: 41.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 53.4ms | GC: 0.0ms)
+Completed 200 OK in 74ms (Views: 41.3ms | ActiveRecord: 19.3ms (9 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:42:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:42:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/g_tipos_veiculos" for ::1 at 2025-09-18 04:42:34 -0400
+Processing by GTiposVeiculosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mGTipoVeiculo Count (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_tipos_veiculos"[0m
+  ↳ app/controllers/g_tipos_veiculos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_tipos_veiculos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoVeiculo Load (0.7ms)[0m  [1m[34mSELECT "g_tipos_veiculos".* FROM "g_tipos_veiculos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_tipos_veiculos/index.html.erb:25
+  Rendered g_tipos_veiculos/index.html.erb within layouts/application (Duration: 21.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" WHERE "g_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/ability.rb:8:in `initialize'
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | GC: 0.0ms)
+Completed 200 OK in 62ms (Views: 34.5ms | ActiveRecord: 4.0ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-18 04:42:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-09-18 04:42:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
