@@ -23,6 +23,9 @@ pt-BR:
       g_tipo_centro_custo:
         one: "Tipo de Centro de Custo"
         other: "Tipos de Centro de Custo"
+      o_status:
+        one: "Status do Orçamento"
+        other: "Status dos Orçamentos"
     attributes:
       funcao:
         nome: "Nome"

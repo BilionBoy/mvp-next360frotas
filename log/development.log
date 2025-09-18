@@ -21462,3 +21462,449 @@ Processing by GTiposCentroCustoController#new as HTML
 Completed 200 OK in 205ms (Views: 78.9ms | ActiveRecord: 67.8ms (0 queries, 0 cached) | GC: 25.4ms)
 
 
+Started POST "/g_tipos_centro_custo" for ::1 at 2025-09-18 01:29:59 -0400
+Processing by GTiposCentroCustoController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "g_tipo_centro_custo"=>{"descricao"=>"Gabinete do Prefeito"}, "button"=>""}
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/g_tipos_centro_custo_controller.rb:22:in `create'
+  [1m[36mGTipoCentroCusto Create (42.2ms)[0m  [1m[32mINSERT INTO "g_tipos_centro_custo" ("descricao", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["descricao", "Gabinete do Prefeito"], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 05:30:01.929641"], ["updated_at", "2025-09-18 05:30:01.929641"]]
+  ↳ app/controllers/g_tipos_centro_custo_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/g_tipos_centro_custo_controller.rb:22:in `create'
+Redirected to http://localhost:3000/g_tipos_centro_custo
+Completed 302 Found in 361ms (ActiveRecord: 185.1ms (1 query, 0 cached) | GC: 2.9ms)
+
+
+Started GET "/g_tipos_centro_custo" for ::1 at 2025-09-18 01:30:02 -0400
+Processing by GTiposCentroCustoController#index as HTML
+  [1m[36mGTipoCentroCusto Count (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_tipos_centro_custo"[0m
+  ↳ app/controllers/g_tipos_centro_custo_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_tipos_centro_custo/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 5.3ms | GC: 0.0ms)
+  [1m[36mGTipoCentroCusto Load (2.2ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_tipos_centro_custo/index.html.erb:25
+  Rendered g_tipos_centro_custo/index.html.erb within layouts/application (Duration: 37.4ms | GC: 0.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | GC: 0.6ms)
+Completed 200 OK in 92ms (Views: 80.3ms | ActiveRecord: 4.3ms (2 queries, 0 cached) | GC: 0.9ms)
+
+
+  [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/o_status" for ::1 at 2025-09-18 01:31:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (12.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250918053051_create_o_status.rb
+
+
+):
+  
+activerecord (7.2.2.1) lib/active_record/migration.rb:756:in `check_pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:95:in `execute_if_updated'
+activerecord (7.2.2.1) lib/active_record/migration.rb:670:in `block in call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2025-09-18 01:31:45 -0400
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7634874803853591840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (17.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (10.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateOStatus (20250918053051)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (131.7ms)[0m  [1m[35mCREATE TABLE "o_status" ("id" bigserial primary key, "descricao" character varying, "created_by" character varying, "updated_by" character varying, "deleted_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (8.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250918053051') RETURNING "version"[0m
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(7634874803853591840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/o_status" for ::1 at 2025-09-18 01:31:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OStatusController#index as HTML
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 17.6ms (0 queries, 0 cached) | GC: 12.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "o_statuses" does not exist
+LINE 10:  WHERE a.attrelid = '"o_statuses"'::regclass
+                             ^
+):
+
+Causes:
+PG::UndefinedTable (ERROR:  relation "o_statuses" does not exist
+LINE 10:  WHERE a.attrelid = '"o_statuses"'::regclass
+                             ^
+)
+  
+Started GET "/o_status" for ::1 at 2025-09-18 01:31:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.6ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 35.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.1ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 306.1ms | GC: 30.7ms)
+Completed 200 OK in 650ms (Views: 319.5ms | ActiveRecord: 163.8ms (2 queries, 0 cached) | GC: 30.7ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 01:32:30 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 4.7ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.6ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 25.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 6.1ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | GC: 0.0ms)
+Completed 200 OK in 111ms (Views: 55.6ms | ActiveRecord: 3.6ms (2 queries, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/o_status/new" for ::1 at 2025-09-18 01:32:33 -0400
+Processing by OStatusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered o_status/_form.html.erb (Duration: 4.4ms | GC: 0.0ms)
+  Rendered o_status/new.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 16.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"o_status"}, missing required keys: [:id]):
+
+Causes:
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"o_status"}, missing required keys: [:id])
+    30:       <div class="d-flex">
+    31:         <div class="breadcrumb py-2">
+    32:           <a href="/" class="breadcrumb-item"><i class="ph-house"></i></a>
+    33:           <%= yield %>
+    34:         </div>
+    35:       </div>
+    36:     </div>
+  
+app/views/o_status/_form.html.erb:3
+app/views/shared/_context_nav.html.erb:33
+app/views/shared/_context_nav.html.erb:1
+app/views/o_status/_form.html.erb:2
+app/views/o_status/new.html.erb:1
+Started GET "/o_status/new" for ::1 at 2025-09-18 01:33:15 -0400
+Processing by OStatusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  Rendered o_status/_form.html.erb (Duration: 66.1ms | GC: 0.0ms)
+  Rendered o_status/new.html.erb within layouts/application (Duration: 67.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 10.6ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"o_status"}, missing required keys: [:id]):
+
+Causes:
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"o_status"}, missing required keys: [:id])
+    21:     </div>
+    22:     <div class="card-footer">
+    23:       <%= btn_submit(f) %>
+    24:       <%= link_to "Voltar", o_status_path, class: "btn btn-light" %>
+    25:     </div>
+    26:   </div>
+    27: <% end %>
+  
+app/views/o_status/_form.html.erb:24
+app/views/o_status/_form.html.erb:6
+app/views/o_status/new.html.erb:1
+Started GET "/o_status/new" for ::1 at 2025-09-18 01:33:25 -0400
+Processing by OStatusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered o_status/_form.html.erb (Duration: 10.8ms | GC: 0.4ms)
+  Rendered o_status/new.html.erb within layouts/application (Duration: 13.1ms | GC: 0.4ms)
+  Rendered shared/_navbar.html.erb (Duration: 5.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | GC: 0.7ms)
+Completed 200 OK in 70ms (Views: 43.9ms | ActiveRecord: 5.3ms (0 queries, 0 cached) | GC: 1.9ms)
+
+
+Started POST "/o_status" for ::1 at 2025-09-18 01:33:36 -0400
+Processing by OStatusController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "o_status"=>{"descricao"=>"Publicado"}, "button"=>""}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mOStatus Create (19.8ms)[0m  [1m[32mINSERT INTO "o_status" ("descricao", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["descricao", "Publicado"], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 05:33:36.219561"], ["updated_at", "2025-09-18 05:33:36.219561"]]
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+Redirected to http://localhost:3000/o_status
+Completed 302 Found in 60ms (ActiveRecord: 24.3ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 01:33:36 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (3.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mOStatus Load (1.0ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 19.7ms | GC: 0.4ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | GC: 0.4ms)
+Completed 200 OK in 49ms (Views: 35.2ms | ActiveRecord: 3.5ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/o_status/new" for ::1 at 2025-09-18 01:33:39 -0400
+Processing by OStatusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 5.5ms | GC: 0.0ms)
+  Rendered o_status/_form.html.erb (Duration: 37.5ms | GC: 17.3ms)
+  Rendered o_status/new.html.erb within layouts/application (Duration: 50.1ms | GC: 17.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 4.7ms | GC: 2.6ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 136.4ms | GC: 71.1ms)
+Completed 200 OK in 144ms (Views: 137.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 71.1ms)
+
+
+Started POST "/o_status" for ::1 at 2025-09-18 01:33:46 -0400
+Processing by OStatusController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "o_status"=>{"descricao"=>"Cotação"}, "button"=>""}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mOStatus Create (5.6ms)[0m  [1m[32mINSERT INTO "o_status" ("descricao", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["descricao", "Cotação"], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 05:33:46.491167"], ["updated_at", "2025-09-18 05:33:46.491167"]]
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+Redirected to http://localhost:3000/o_status
+Completed 302 Found in 85ms (ActiveRecord: 7.8ms (1 query, 0 cached) | GC: 42.1ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 01:33:46 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.6ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 25.1ms | GC: 14.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 8.3ms | GC: 5.8ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 73.1ms | GC: 33.4ms)
+Completed 200 OK in 99ms (Views: 83.2ms | ActiveRecord: 2.8ms (2 queries, 0 cached) | GC: 45.1ms)
+
+
+Started GET "/o_status/new" for ::1 at 2025-09-18 01:33:48 -0400
+Processing by OStatusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 22.7ms | GC: 19.2ms)
+  Rendered o_status/_form.html.erb (Duration: 73.0ms | GC: 48.9ms)
+  Rendered o_status/new.html.erb within layouts/application (Duration: 118.2ms | GC: 90.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 4.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 6.9ms | GC: 6.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 171.5ms | GC: 98.5ms)
+Completed 200 OK in 176ms (Views: 172.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 100.6ms)
+
+
+Started POST "/o_status" for ::1 at 2025-09-18 01:33:51 -0400
+Processing by OStatusController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "o_status"=>{"descricao"=>"Concluído"}, "button"=>""}
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mOStatus Create (7.0ms)[0m  [1m[32mINSERT INTO "o_status" ("descricao", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["descricao", "Concluído"], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 05:33:51.547956"], ["updated_at", "2025-09-18 05:33:51.547956"]]
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+Redirected to http://localhost:3000/o_status
+Completed 302 Found in 31ms (ActiveRecord: 14.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 01:33:51 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOStatus Load (8.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 29.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.3ms | GC: 1.1ms)
+Completed 200 OK in 61ms (Views: 39.7ms | ActiveRecord: 9.4ms (2 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/o_status/new" for ::1 at 2025-09-18 01:33:52 -0400
+Processing by OStatusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered o_status/_form.html.erb (Duration: 20.7ms | GC: 2.6ms)
+  Rendered o_status/new.html.erb within layouts/application (Duration: 21.6ms | GC: 2.6ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | GC: 3.3ms)
+Completed 200 OK in 61ms (Views: 52.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.3ms)
+
+
+Started POST "/o_status" for ::1 at 2025-09-18 01:33:55 -0400
+Processing by OStatusController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "o_status"=>{"descricao"=>"Pendente"}, "button"=>""}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mOStatus Create (5.2ms)[0m  [1m[32mINSERT INTO "o_status" ("descricao", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["descricao", "Pendente"], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 05:33:55.591829"], ["updated_at", "2025-09-18 05:33:55.591829"]]
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+Redirected to http://localhost:3000/o_status
+Completed 302 Found in 48ms (ActiveRecord: 20.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 01:33:55 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mOStatus Load (0.7ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 63.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 108.4ms | GC: 0.6ms)
+Completed 200 OK in 122ms (Views: 108.8ms | ActiveRecord: 1.5ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/o_status/new" for ::1 at 2025-09-18 01:33:57 -0400
+Processing by OStatusController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered o_status/_form.html.erb (Duration: 9.5ms | GC: 0.0ms)
+  Rendered o_status/new.html.erb within layouts/application (Duration: 12.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 5.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/o_status" for ::1 at 2025-09-18 01:33:59 -0400
+Processing by OStatusController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "o_status"=>{"descricao"=>"Cancelado"}, "button"=>""}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mOStatus Create (5.5ms)[0m  [1m[32mINSERT INTO "o_status" ("descricao", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["descricao", "Cancelado"], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 05:33:59.747299"], ["updated_at", "2025-09-18 05:33:59.747299"]]
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/o_status_controller.rb:22:in `create'
+Redirected to http://localhost:3000/o_status
+Completed 302 Found in 32ms (ActiveRecord: 8.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 01:33:59 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mOStatus Load (2.0ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 31.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/o_status/1" for ::1 at 2025-09-18 01:34:09 -0400
+Processing by OStatusController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mOStatus Load (1.5ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" WHERE "o_status"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/o_status_controller.rb:48:in `set_o_status'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/o_status_controller.rb:38:in `destroy'
+  [1m[36mOStatus Destroy (17.3ms)[0m  [1m[31mDELETE FROM "o_status" WHERE "o_status"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/o_status_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/o_status_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/o_status
+Completed 302 Found in 142ms (ActiveRecord: 26.4ms (2 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/o_status" for ::1 at 2025-09-18 01:34:09 -0400
+Processing by OStatusController#index as HTML
+  [1m[36mOStatus Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "o_status"[0m
+  ↳ app/controllers/o_status_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering o_status/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mOStatus Load (1.1ms)[0m  [1m[34mSELECT "o_status".* FROM "o_status" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/o_status/index.html.erb:25
+  Rendered o_status/index.html.erb within layouts/application (Duration: 39.3ms | GC: 3.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | GC: 4.0ms)
+Completed 200 OK in 57ms (Views: 49.5ms | ActiveRecord: 2.6ms (2 queries, 0 cached) | GC: 4.0ms)
+
+

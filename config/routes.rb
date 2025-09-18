@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :o_status
   resources :g_tipos_centro_custo
   resources :g_tipos_veiculos
   resources :g_status
