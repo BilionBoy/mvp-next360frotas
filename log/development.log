@@ -23055,3 +23055,375 @@ Processing by GTipoUsuariosController#index as HTML
 Completed 200 OK in 42ms (Views: 30.6ms | ActiveRecord: 5.9ms (2 queries, 0 cached) | GC: 3.8ms)
 
 
+Started GET "/g_tipo_usuarios" for ::1 at 2025-09-18 01:53:28 -0400
+Processing by GTipoUsuariosController#index as HTML
+  [1m[36mGTipoUsuario Count (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_tipo_usuarios"[0m
+  ↳ app/controllers/g_tipo_usuarios_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_tipo_usuarios/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 16.5ms | GC: 0.0ms)
+  [1m[36mGTipoUsuario Load (1.1ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_tipo_usuarios/index.html.erb:25
+  Rendered g_tipo_usuarios/index.html.erb within layouts/application (Duration: 184.6ms | GC: 4.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 6.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 2.3ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 241.4ms | GC: 4.9ms)
+Completed 200 OK in 469ms (Views: 233.2ms | ActiveRecord: 170.8ms (2 queries, 0 cached) | GC: 5.8ms)
+
+
+  [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/g_centros_custos" for ::1 at 2025-09-18 01:56:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250918055548_create_g_centro_custos.rb
+
+
+):
+  
+activerecord (7.2.2.1) lib/active_record/migration.rb:756:in `check_pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:95:in `execute_if_updated'
+activerecord (7.2.2.1) lib/active_record/migration.rb:670:in `block in call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2025-09-18 01:56:52 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7634874803853591840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateGCentroCustos (20250918055548)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (155.8ms)[0m  [1m[35mCREATE TABLE "g_centro_custos" ("id" bigserial primary key, "nome" character varying NOT NULL, "g_tipo_centro_custo_id" bigint NOT NULL, "valor_inicial" decimal(15,2) DEFAULT 0.0 NOT NULL, "saldo_atual" decimal(15,2) DEFAULT 0.0 NOT NULL, "created_by" character varying, "updated_by" character varying, "deleted_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_182111a215"
+FOREIGN KEY ("g_tipo_centro_custo_id")
+  REFERENCES "g_tipos_centro_custo" ("id")
+)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE INDEX "index_g_centro_custos_on_g_tipo_centro_custo_id" ON "g_centro_custos" ("g_tipo_centro_custo_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250918055548') RETURNING "version"[0m
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7634874803853591840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/g_centros_custos" for ::1 at 2025-09-18 01:56:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/g_centros_custos"):
+  
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 01:57:01 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.6ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:34
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 26.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | GC: 8.1ms)
+Completed 200 OK in 100ms (Views: 67.5ms | ActiveRecord: 4.6ms (2 queries, 0 cached) | GC: 8.1ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 01:57:38 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 6.3ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:34
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 25.0ms | GC: 0.8ms)
+  Rendered shared/_navbar.html.erb (Duration: 3.5ms | GC: 0.3ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | GC: 1.9ms)
+Completed 200 OK in 264ms (Views: 56.7ms | ActiveRecord: 2.7ms (2 queries, 0 cached) | GC: 10.0ms)
+
+
+Started GET "/g_centro_custos/new" for ::1 at 2025-09-18 01:57:40 -0400
+Processing by GCentroCustosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 7.2ms | GC: 0.0ms)
+  Rendered g_centro_custos/_form.html.erb (Duration: 47.4ms | GC: 0.2ms)
+  Rendered g_centro_custos/new.html.erb within layouts/application (Duration: 48.9ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 4.8ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionView::Template::Error (Association :g_tipo_centro_custo not found):
+
+Causes:
+RuntimeError (Association :g_tipo_centro_custo not found)
+    22:         
+    23:         
+    24:           <div class="col-12">
+    25:             <%= f.association :g_tipo_centro_custo, input_html: { class: "capitalize"}, placeholder: "G tipo centro custo"  %>
+    26:           </div>
+    27:         
+    28:         
+  
+app/views/g_centro_custos/_form.html.erb:25
+app/views/g_centro_custos/_form.html.erb:6
+app/views/g_centro_custos/new.html.erb:1
+Started GET "/g_centro_custos/new" for ::1 at 2025-09-18 01:59:00 -0400
+Processing by GCentroCustosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 7.4ms | GC: 1.1ms)
+  Rendered g_centro_custos/_form.html.erb (Duration: 36.9ms | GC: 17.8ms)
+  Rendered g_centro_custos/new.html.erb within layouts/application (Duration: 39.1ms | GC: 17.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | GC: 17.8ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 44.0ms (0 queries, 0 cached) | GC: 77.6ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007ad2c3b82598>::ETipoCentroCusto):
+
+Causes:
+NameError (uninitialized constant #<Class:0x00007ad2c3b82598>::ETipoCentroCusto)
+    17:           <%= f.input :nome, input_html: { class: "capitalize"}, placeholder: "Nome"  %>
+    18:         </div>
+    19:         <div class="col-12">
+    20:           <%= f.input :e_tipo_centro_custo_id, collection: ETipoCentroCusto.all, label_method: :descricao, value_method: :id, prompt: "Selecione o Cliente" %>
+    21:         </div>
+    22:         <div class="col-12">
+    23:           <%= f.input :valor_inicial, input_html: { class: "capitalize"}, placeholder: "Valor inicial"  %>
+  
+app/views/g_centro_custos/_form.html.erb:20
+app/views/g_centro_custos/_form.html.erb:5
+app/views/g_centro_custos/new.html.erb:1
+Started GET "/g_centro_custos/new" for ::1 at 2025-09-18 01:59:27 -0400
+Processing by GCentroCustosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  [1m[36mGTipoCentroCusto Load (6.0ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo"[0m
+  ↳ app/views/g_centro_custos/_form.html.erb:20
+  Rendered g_centro_custos/_form.html.erb (Duration: 78.8ms | GC: 5.2ms)
+  Rendered g_centro_custos/new.html.erb within layouts/application (Duration: 80.0ms | GC: 5.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 6.2ms | GC: 3.5ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.7ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 115.4ms | GC: 18.5ms)
+Completed 200 OK in 138ms (Views: 105.2ms | ActiveRecord: 17.3ms (1 query, 0 cached) | GC: 19.0ms)
+
+
+Started GET "/g_centro_custos/new" for ::1 at 2025-09-18 02:00:06 -0400
+Processing by GCentroCustosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.4ms | GC: 0.0ms)
+  [1m[36mGTipoCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo"[0m
+  ↳ app/views/g_centro_custos/_form.html.erb:20
+  Rendered g_centro_custos/_form.html.erb (Duration: 57.3ms | GC: 12.0ms)
+  Rendered g_centro_custos/new.html.erb within layouts/application (Duration: 58.9ms | GC: 12.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 76.9ms | GC: 13.0ms)
+Completed 200 OK in 138ms (Views: 74.3ms | ActiveRecord: 9.1ms (1 query, 0 cached) | GC: 13.0ms)
+
+
+Started GET "/g_centro_custos/new" for ::1 at 2025-09-18 02:00:26 -0400
+Processing by GCentroCustosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  [1m[36mGTipoCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo"[0m
+  ↳ app/views/g_centro_custos/_form.html.erb:20
+  Rendered g_centro_custos/_form.html.erb (Duration: 28.3ms | GC: 0.9ms)
+  Rendered g_centro_custos/new.html.erb within layouts/application (Duration: 29.2ms | GC: 0.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 5.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | GC: 1.2ms)
+Completed 200 OK in 76ms (Views: 44.4ms | ActiveRecord: 8.9ms (1 query, 0 cached) | GC: 11.1ms)
+
+
+Started POST "/g_centro_custos" for ::1 at 2025-09-18 02:00:44 -0400
+Processing by GCentroCustosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "g_centro_custo"=>{"nome"=>"A", "g_tipo_centro_custo_id"=>"1", "valor_inicial"=>"12323", "saldo_atual"=>"123"}, "button"=>""}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:22:in `create'
+  [1m[36mGCentroCusto Create (47.0ms)[0m  [1m[32mINSERT INTO "g_centro_custos" ("nome", "g_tipo_centro_custo_id", "valor_inicial", "saldo_atual", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["nome", "A"], ["g_tipo_centro_custo_id", 1], ["valor_inicial", "12323.0"], ["saldo_atual", "123.0"], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-09-18 06:00:44.138668"], ["updated_at", "2025-09-18 06:00:44.138668"]]
+  ↳ app/controllers/g_centro_custos_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:22:in `create'
+Redirected to http://localhost:3000/g_centro_custos
+Completed 302 Found in 126ms (ActiveRecord: 49.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:00:44 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (1.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:34
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 27.5ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 5.9ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `g_tipo_centro_custo' for an instance of GCentroCusto):
+
+Causes:
+NoMethodError (undefined method `g_tipo_centro_custo' for an instance of GCentroCusto)
+    52:                         <td><%= g_centro_custo.nome %></td>
+    53:                       
+    54:                       
+    55:                         <td><%= g_centro_custo.g_tipo_centro_custo %></td>
+    56:                       
+    57:                       
+    58:                         <td><%= g_centro_custo.valor_inicial %></td>
+  
+app/views/g_centro_custos/index.html.erb:55
+app/views/g_centro_custos/index.html.erb:34
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:01:19 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.7ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.7ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:34
+  [1m[36mGTipoCentroCusto Load (1.0ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:55
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 149.0ms | GC: 1.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 183.3ms | GC: 2.9ms)
+Completed 200 OK in 237ms (Views: 155.9ms | ActiveRecord: 50.8ms (3 queries, 0 cached) | GC: 3.1ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:01:37 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.5ms | GC: 0.2ms)
+  [1m[36mGCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 67.3ms | GC: 1.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 88.8ms | GC: 1.1ms)
+Completed 200 OK in 110ms (Views: 74.6ms | ActiveRecord: 20.1ms (3 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:01:50 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 48.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 7.1ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 69.9ms | GC: 0.0ms)
+Completed 200 OK in 87ms (Views: 63.2ms | ActiveRecord: 11.7ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/g_centro_custos/1/edit" for ::1 at 2025-09-18 02:01:54 -0400
+Processing by GCentroCustosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/g_centro_custos_controller.rb:48:in `set_g_centro_custo'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/edit.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  [1m[36mGTipoCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo"[0m
+  ↳ app/views/g_centro_custos/_form.html.erb:20
+  Rendered g_centro_custos/_form.html.erb (Duration: 27.6ms | GC: 0.0ms)
+  Rendered g_centro_custos/edit.html.erb within layouts/application (Duration: 28.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 35.1ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/g_centro_custos/1" for ::1 at 2025-09-18 02:01:58 -0400
+Processing by GCentroCustosController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "g_centro_custo"=>{"nome"=>"Renda", "g_tipo_centro_custo_id"=>"1", "valor_inicial"=>"12323.0", "saldo_atual"=>"123.0"}, "button"=>"", "id"=>"1"}
+  [1m[36mGCentroCusto Load (0.6ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" WHERE "g_centro_custos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/g_centro_custos_controller.rb:48:in `set_g_centro_custo'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:30:in `update'
+  [1m[36mGCentroCusto Update (9.3ms)[0m  [1m[33mUPDATE "g_centro_custos" SET "nome" = $1, "updated_at" = $2 WHERE "g_centro_custos"."id" = $3[0m  [["nome", "Renda"], ["updated_at", "2025-09-18 06:01:58.827788"], ["id", 1]]
+  ↳ app/controllers/g_centro_custos_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:30:in `update'
+Redirected to http://localhost:3000/g_centro_custos
+Completed 303 See Other in 98ms (ActiveRecord: 13.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/g_centro_custos" for ::1 at 2025-09-18 02:01:58 -0400
+Processing by GCentroCustosController#index as HTML
+  [1m[36mGCentroCusto Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "g_centro_custos"[0m
+  ↳ app/controllers/g_centro_custos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering g_centro_custos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mGCentroCusto Load (0.5ms)[0m  [1m[34mSELECT "g_centro_custos".* FROM "g_centro_custos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/g_centro_custos/index.html.erb:25
+  [1m[36mGTipoCentroCusto Load (0.4ms)[0m  [1m[34mSELECT "g_tipos_centro_custo".* FROM "g_tipos_centro_custo" WHERE "g_tipos_centro_custo"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/g_centro_custos/index.html.erb:43
+  Rendered g_centro_custos/index.html.erb within layouts/application (Duration: 20.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 1.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+

@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_09_18_054816) do
+ActiveRecord::Schema[7.2].define(version: 2025_09_18_055548) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "g_centro_custos", force: :cascade do |t|
+    t.string "nome", null: false
+    t.bigint "g_tipo_centro_custo_id", null: false
+    t.decimal "valor_inicial", precision: 15, scale: 2, default: "0.0", null: false
+    t.decimal "saldo_atual", precision: 15, scale: 2, default: "0.0", null: false
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["g_tipo_centro_custo_id"], name: "index_g_centro_custos_on_g_tipo_centro_custo_id"
+  end
 
   create_table "g_status", force: :cascade do |t|
     t.string "descricao"
@@ -96,6 +109,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_054816) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "g_centro_custos", "g_tipos_centro_custo"
   add_foreign_key "users", "g_status"
   add_foreign_key "users", "g_tipo_usuarios"
 end

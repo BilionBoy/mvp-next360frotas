@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :g_centro_custos
   devise_for :users
   resources :g_tipo_usuarios
   resources :o_categorias_servico
