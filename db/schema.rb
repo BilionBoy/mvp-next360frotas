@@ -158,6 +158,10 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_080303) do
     t.datetime "updated_at", null: false
   end
 
+
+
+  
+
   create_table "o_tipos_solicitacao", force: :cascade do |t|
     t.string "descricao"
     t.string "created_by"

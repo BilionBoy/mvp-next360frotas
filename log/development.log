@@ -28982,3 +28982,167 @@ Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 
   
 ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
   
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7634874803853591840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (27.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(7634874803853591840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2025-09-19 19:25:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (11.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 146ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-09-19 19:25:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 331.7ms | GC: 196.7ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 1062.6ms | GC: 237.3ms)
+Completed 200 OK in 2043ms (Views: 1215.6ms | ActiveRecord: 85.4ms (0 queries, 0 cached) | GC: 758.9ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2025-09-19 19:25:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-19 19:26:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/users/sign_in" for ::1 at 2025-09-19 19:26:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 127.1ms | GC: 11.4ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 159.0ms | GC: 11.4ms)
+Completed 200 OK in 207ms (Views: 163.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 11.4ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-19 19:26:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+  [1m[36mActiveRecord::SchemaMigration Load (8.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for ::1 at 2025-09-19 19:26:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 9.6ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 16.7ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-19 19:26:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/users/sign_in" for ::1 at 2025-09-19 19:26:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 12.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 22.2ms | GC: 0.4ms)
+Completed 200 OK in 32ms (Views: 23.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-19 19:26:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/users/sign_in" for ::1 at 2025-09-19 19:26:44 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 18.7ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 23.5ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 24.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-19 19:26:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/users/sign_in" for ::1 at 2025-09-19 19:26:52 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 12.0ms | GC: 0.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 16.8ms | GC: 0.3ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-09-19 19:26:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mGTipoUsuario Load (5.2ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/sign_in" for ::1 at 2025-09-19 19:31:23 -0400
+Started GET "/users/sign_up" for ::1 at 2025-09-19 19:31:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/devise_application
+  Rendered devise/sessions/new.html.erb within layouts/devise_application (Duration: 163.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 371.2ms | GC: 0.0ms)
+Completed 200 OK in 905ms (Views: 407.3ms | ActiveRecord: 241.9ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (22.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:49
+  [1m[36mGStatus Load (22.6ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:52
+Started GET "/users/sign_up" for ::1 at 2025-09-19 19:31:30 -0400
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 411.2ms | GC: 0.7ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 492.2ms | GC: 0.7ms)
+Completed 200 OK in 557ms (Views: 419.4ms | ActiveRecord: 87.8ms (2 queries, 0 cached) | GC: 1.1ms)
+
+
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (1.4ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:49
+  [1m[36mGStatus Load (0.8ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:52
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 59.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 67.0ms | GC: 0.0ms)
+Completed 200 OK in 74ms (Views: 65.6ms | ActiveRecord: 2.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-09-19 19:31:31 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/devise_application
+  [1m[36mGTipoUsuario Load (5.8ms)[0m  [1m[34mSELECT "g_tipo_usuarios".* FROM "g_tipo_usuarios"[0m
+  ↳ app/views/devise/registrations/new.html.erb:49
+  [1m[36mGStatus Load (0.9ms)[0m  [1m[34mSELECT "g_status".* FROM "g_status"[0m
+  ↳ app/views/devise/registrations/new.html.erb:52
+  Rendered devise/registrations/new.html.erb within layouts/devise_application (Duration: 64.6ms | GC: 1.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 71.1ms | GC: 2.4ms)
+Completed 200 OK in 85ms (Views: 73.8ms | ActiveRecord: 6.6ms (2 queries, 0 cached) | GC: 2.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (5284.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mvpmoovlink_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (286.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mvpmoovlink_development"[0m
+  [1m[35m (108.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mvpmoovlink_test"[0m
+  [1m[35m (771.7ms)[0m  [1m[35mCREATE DATABASE "mvpmoovlink_development" ENCODING = 'unicode'[0m
+  [1m[35m (280.1ms)[0m  [1m[35mCREATE DATABASE "mvpmoovlink_test" ENCODING = 'unicode'[0m
+  [1m[35m (57.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
