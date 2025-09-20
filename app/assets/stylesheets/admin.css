@@ -7,7 +7,7 @@
 
 :root {
   /* Cores Oficiais da Prefeitura */
-  --pv-blue-primary: #03317b ;
+  --pv-blue-primary: #03317b;
   --pv-blue-secondary: #0f4a9c;
   --pv-blue-light: #2e5dbe;
   --pv-blue-dark: #0d3f8c;
@@ -37,6 +37,12 @@
   --pv-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.nav-item-submenu > .nav-group-sub {
+  display: none; /* garante que submenus fiquem fechados */
+}
+.nav-item-submenu.open > .nav-group-sub {
+  display: block;
+}
 /* Added global typography base styles for institutional consistency */
 body {
   font-family: var(--pv-font-primary);

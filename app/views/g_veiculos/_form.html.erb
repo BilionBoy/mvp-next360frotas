@@ -40,6 +40,14 @@
         <div class="col-3">
           <%= f.input :g_centro_custo_id, collection: GCentroCusto.all, label_method: :nome, value_method: :id, prompt: "Selecione o Tipo de Centro de Custo" %>
         </div>
+        <!-- 🔑 Novo campo para cartão -->
+        <div class="col-3">
+          <%= f.input :g_cartao_veiculo_id,
+                collection: GCartaoVeiculo.all,
+                label_method: :numero_cartao,
+                value_method: :id,
+                prompt: "Selecione o Cartão vinculado" %>
+        </div>
         <div class="col-12">
           <%= f.input :criado_em, input_html: { class: "capitalize"}, placeholder: "Criado em"  %>
         </div>
@@ -47,10 +55,9 @@
           <%= f.input :atualizado_em, input_html: { class: "capitalize"}, placeholder: "Atualizado em"  %>
         </div>
       </div>
+      <div class="card-footer">
+        <%= btn_submit(f) %>
+        <%= link_to "Voltar", g_veiculos_path, class: "btn btn-light" %>
+      </div>
     </div>
-    <div class="card-footer">
-      <%= btn_submit(f) %>
-      <%= link_to "Voltar", g_veiculos_path, class: "btn btn-light" %>
-    </div>
-  </div>
-<% end %>
+  <% end %>

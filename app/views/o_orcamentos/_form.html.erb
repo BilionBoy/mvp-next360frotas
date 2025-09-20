@@ -46,12 +46,7 @@
                       label: "Tipo de Solicitação" %>
         </div>
         <div class="col-md-3">
-          <%= f.input :o_status_id,
-                      collection: OStatus.all,
-                      label_method: :descricao,
-                      value_method: :id,
-                      prompt: "Selecione o status",
-                      label: "Status" %>
+          <%= f.input :o_status_id,collection: OStatus.all,label_method: :descricao,value_method: :id,prompt: "Selecione o status",label: "Status" %>
         </div>
         <div class="col-md-3">
           <%= f.input :valor_total, label: "Valor Total", input_html: { placeholder: "R$ 0,00" } %>

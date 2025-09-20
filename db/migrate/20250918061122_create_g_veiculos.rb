@@ -14,7 +14,6 @@ class CreateGVeiculos < ActiveRecord::Migration[7.2]
       t.references :g_centro_custo
       t.datetime :criado_em
       t.datetime :atualizado_em
-          
       t.string :created_by
       t.string :updated_by
       t.datetime :deleted_at
