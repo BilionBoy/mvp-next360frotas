@@ -50,10 +50,60 @@ pt-BR:
       o_proposta:
         one: "Proposta"
         other: "Propostas"
+      o_status_aprovacao:
+        one: "Status de Aprovação"
+        other: "Status de Aprovações"
+      o_orcamento_proposta:
+        one: "Orçamento e Proposta"
+        other: "Orçamentos e Propostas"
     attributes:
       g_centro_custo:
         descricao: "Descrição"
         g_tipo_centro_custo_id: "Tipo de Centro de Custo"
+      g_veiculo:
+        placa: "Placa"
+        g_tipo_veiculo_id: "Tipo de Veículo"
+        g_centro_custo_id: "Centro de Custo"
+        g_cartao_veiculo_id: "Cartão do Veículo"
+        renavam: "Renavam"
+        chassi: "Chassi"
+        modelo: "Modelo"
+        marca: "Marca"
+        ano_fabricacao: "Ano de Fabricação"
+        ano_modelo: "Ano do Modelo"
+        cor: "Cor"
+      g_status:
+        descricao: "Descrição"
+      g_condutor:
+        nome: "Nome"
+        cnh: "CNH"
+        validade_cnh: "Validade da CNH"
+        telefone: "Telefone"
+        email: "E-mail"
+        g_centro_custo_id: "Centro de Custo"
+        g_status_id: "Status"
+      o_orcamento:
+        descricao: "Descrição"
+        data_solicitacao: "Data da Solicitação"
+        o_tipo_solicitacao_id: "Tipo de Solicitação"
+        o_status_id: "Status do Orçamento"
+        g_veiculo_id: "Veículo"
+        g_condutor_id: "Condutor"
+        o_categoria_servico_id: "Categoria do Serviço"
+        valor_total: "Valor Total"
+      o_proposta:
+        o_orcamento_id: "Orçamento"
+        descricao: "Descrição"
+        data_proposta: "Data da Proposta"
+        valor_proposta: "Valor da Proposta"
+        prazo_entrega: "Prazo de Entrega"
+        observacoes: "Observações"
+      o_status_aprovacao:
+        descricao: "Descrição"
+      o_orcamento_proposta:
+        o_orcamento_id: "Orçamento"
+        o_proposta_id: "Proposta"
+        o_status_aprovacao_id: "Status da Aprovação"
     errors:
       messages:
         record_invalid: "A validação falhou: %{errors}"

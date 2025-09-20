@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_09_18_080303) do
+ActiveRecord::Schema[7.2].define(version: 2025_09_20_195330) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "g_cartao_veiculos", force: :cascade do |t|
+    t.integer "numero_cartao"
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "g_centro_custos", force: :cascade do |t|
     t.string "nome", null: false
@@ -99,6 +108,8 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_080303) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "g_cartao_veiculo_id", null: false
+    t.index ["g_cartao_veiculo_id"], name: "index_g_veiculos_on_g_cartao_veiculo_id"
     t.index ["g_centro_custo_id"], name: "index_g_veiculos_on_g_centro_custo_id"
     t.index ["g_tipo_veiculo_id"], name: "index_g_veiculos_on_g_tipo_veiculo_id"
   end
@@ -110,6 +121,22 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_080303) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "o_orcamento_propostas", force: :cascade do |t|
+    t.bigint "o_orcamento_id"
+    t.bigint "o_proposta_id"
+    t.bigint "o_status_aprovacao_id"
+    t.integer "aprovado_por"
+    t.datetime "aprovado_em"
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["o_orcamento_id"], name: "index_o_orcamento_propostas_on_o_orcamento_id"
+    t.index ["o_proposta_id"], name: "index_o_orcamento_propostas_on_o_proposta_id"
+    t.index ["o_status_aprovacao_id"], name: "index_o_orcamento_propostas_on_o_status_aprovacao_id"
   end
 
   create_table "o_orcamentos", force: :cascade do |t|
@@ -158,9 +185,14 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_080303) do
     t.datetime "updated_at", null: false
   end
 
-
-
-  
+  create_table "o_status_aprovacao", force: :cascade do |t|
+    t.string "descricao"
+    t.string "created_by"
+    t.string "updated_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "o_tipos_solicitacao", force: :cascade do |t|
     t.string "descricao"
@@ -192,6 +224,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_18_080303) do
 
   add_foreign_key "g_centro_custos", "g_tipos_centro_custo"
   add_foreign_key "g_condutores", "g_status"
+  add_foreign_key "g_veiculos", "g_cartao_veiculos"
   add_foreign_key "o_orcamentos", "g_centro_custos"
   add_foreign_key "o_orcamentos", "g_veiculos"
   add_foreign_key "o_orcamentos", "o_status"

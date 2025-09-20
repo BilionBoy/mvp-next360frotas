@@ -108,6 +108,9 @@
             <li class="nav-item">
               <a href="<%= o_categorias_servico_path %>" class="nav-link">Categorias de Serviço</a>
             </li>
+            <li class="nav-item">
+              <a href="<%= g_cartao_veiculos_path %>" class="nav-link">Cadastrar Cartão </a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -116,17 +119,20 @@
 </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const input = document.getElementById('sidebar-search-input');
+
+  // FILTRO
   function filterSidebar() {
-    const input = document.getElementById('sidebar-search-input');
     const filter = input.value.toLowerCase();
-    const navItems = document.querySelectorAll('#sidebar-items .nav-item');
+    const navItems = document.querySelectorAll('#sidebar-items .nav-item:not(.nav-item-header)');
     const navHeaders = document.querySelectorAll('#sidebar-items .nav-item-header');
     let visibleCount = 0;
 
     navItems.forEach(item => {
       const text = item.textContent.toLowerCase();
       item.style.display = text.includes(filter) ? '' : 'none';
-      if (text.includes(filter)) visibleCount++;
+      if(text.includes(filter)) visibleCount++;
     });
 
     navHeaders.forEach(header => {
@@ -139,6 +145,7 @@
       header.style.display = hasVisible || filter === '' ? '' : 'none';
     });
 
+    // Mensagem de "Nenhum resultado"
     const sidebar = document.querySelector('.pv-nav');
     let noResultMsg = sidebar.querySelector('.no-results-message');
 
@@ -159,8 +166,20 @@
     } else if(noResultMsg) {
       noResultMsg.remove();
     }
-
-    const searchHint = document.querySelector('.pv-search-hint span');
-    if(searchHint) searchHint.textContent = filter.length > 0 ? `${visibleCount} resultado(s) encontrado(s)` : 'Digite para filtrar opções';
   }
+
+  input.addEventListener('keyup', filterSidebar);
+
+  // SUBMENU: abre/fecha ao clicar
+  document.querySelectorAll('.nav-item-submenu > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const parent = link.parentElement;
+      parent.classList.toggle('open'); // alterna aberto/fechado
+    });
+  });
+
+  // Fecha todos submenus por padrão
+  document.querySelectorAll('.nav-item-submenu').forEach(submenu => submenu.classList.remove('open'));
+});
 </script>
